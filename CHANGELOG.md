@@ -1,5 +1,15 @@
 # Riwayat Perubahan
 
+## Web 0.7 — 22 Oktober 2026
+
+- Koreksi notasi invers dan indeks di seluruh bidang teks materi aktif.
+- Data bacaan disatukan; aset diberi hash isi dan identitas rilis untuk menghindari revisi tertahan cache.
+- Alias rs = sr³ pada lab dihedral; kasus prediksi baru pada Bab 1, 3, 7.
+- Soal normalitas dipindahkan ke tantangan Bab 10; pengantar operasi pasangan, contoh Klein, dan lemma relatif prima ditambahkan pada Bab 4.
+- Empat aksioma ditampilkan sebagai daftar; pembahasan operasi kuosien memakai tabel.
+- Pemetaan tujuan ke latihan, 14 evaluasi kasus baru dengan penyimpanan jawaban, serta umpan balik khusus pilihan kuis.
+- Pengujian seluruh 14 bab desktop/ponsel, tautan tujuan, penyimpanan evaluasi, dan kasus perhitungan baru.
+
 ## Web 0.6 — 22 Oktober 2026
 
 - Pendalaman Bab 4–6, 8, 12–13 serta pengantar Bab 0.

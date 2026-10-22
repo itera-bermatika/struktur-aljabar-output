@@ -1,5 +1,5 @@
 /* Presentasi LaTeX eksplisit untuk laboratorium; algoritma tetap di core.js. */
-const dNames=['e','r','r²','r³','s','sr','sr²','sr³'];
+const dNames=['e','r','r²','r³','s','sr','sr²','sr³ = rs'];
 const dTex=['e','r','r^{2}','r^{3}','s','sr','sr^{2}','sr^{3}'];
 const cycleTex=p=>cycle(p).replace(/ /g,'\\,');
 function operationLab(host,id){
@@ -12,7 +12,7 @@ function operationLab(host,id){
  $('#op-n').onchange=update;$('#op-kind').onchange=update;update();
 }
 function cosetLab(host,id){
- let a=4;host.innerHTML=`<div class="controls">${control('coset-n','Modulus n',range(2,18),12)}<span id="generator-control"></span></div><div id="coset-result" aria-live="polite"></div>`;
+ let a=id===3?6:4;host.innerHTML=`<div class="controls">${control('coset-n','Modulus n',range(2,18),id===3?15:12)}<span id="generator-control"></span></div><div id="coset-result" aria-live="polite"></div>`;
  function generator(){const n=+$('#coset-n').value;a=Math.min(a,n-1);$('#generator-control').innerHTML=control('coset-a','Generator a',range(0,n-1),a);$('#coset-a').onchange=()=>{a=+$('#coset-a').value;update();};update();}
  function update(){
   const n=+$('#coset-n').value,d=C.cosets(n,a),g=C.gcd(n,a);
@@ -63,15 +63,15 @@ function colorLab(host){
 }
 
 function mappingLab(host){
- host.innerHTML=`<div class="controls">${control('map-rule','Aturan pada domain {−1,0,1}',[['square','Kuadrat'],['shift','Tambah satu']],'square')}${control('map-target','Kodomain',[['small','{0,1}'],['large','{0,1,2}']],'large')}</div><div id="map-result" aria-live="polite"></div>`;
- function update(){const domain=[-1,0,1],target=$('#map-target').value==='small'?[0,1]:[0,1,2],values=domain.map(x=>$('#map-rule').value==='square'?x*x:x+1),valid=values.every(x=>target.includes(x)),image=[...new Set(values)].sort(),injective=image.length===domain.length,surjective=target.every(x=>image.includes(x));
- $('#map-result').innerHTML=table([tm('x'),tm('f(x)')],domain.map((x,i)=>[x,values[i]]),'Setiap input dan hasilnya')+`<p>Domain ${I(texSet(domain))}; kodomain ${I(texSet(target))}; hasil yang diperoleh ${I(texSet(image))}.</p>`+(valid?`<p><strong>Fungsi sah.</strong> ${injective?'Injektif: semua input mempunyai hasil berbeda.':'Tidak injektif: input berbeda dapat mempunyai hasil sama.'} ${surjective?'Surjektif: seluruh kodomain tercapai.':'Tidak surjektif: ada anggota kodomain tidak tercapai.'}</p>`:`<p><strong>Bukan fungsi menuju kodomain yang dipilih:</strong> hasil ${I('2')} berada di luar kodomain. Perbaiki kodomain sebelum menguji injektif atau surjektif.</p>`);
+ host.innerHTML=`<div class="controls">${control('map-rule','Aturan pada domain {−1,0,1}',[['square','Kuadrat'],['shift','Tambah satu'],['double','Kali dua']],'double')}${control('map-target','Kodomain',[['small','{0,1}'],['large','{0,1,2}'],['even','{−2,0,2}'],['wide','{−2,−1,0,1,2}']],'wide')}</div><div id="map-result" aria-live="polite"></div>`;
+ function update(){const domain=[-1,0,1],target=({small:[0,1],large:[0,1,2],even:[-2,0,2],wide:[-2,-1,0,1,2]})[$('#map-target').value],values=domain.map(x=>$('#map-rule').value==='square'?x*x:$('#map-rule').value==='shift'?x+1:2*x),valid=values.every(x=>target.includes(x)),image=[...new Set(values)].sort(),injective=image.length===domain.length,surjective=target.every(x=>image.includes(x));
+ $('#map-result').innerHTML=table([tm('x'),tm('f(x)')],domain.map((x,i)=>[x,values[i]]),'Setiap input dan hasilnya')+`<p>Domain ${I(texSet(domain))}; kodomain ${I(texSet(target))}; hasil yang diperoleh ${I(texSet(image))}.</p>`+(valid?`<p><strong>Fungsi sah.</strong> ${injective?'Injektif: semua input mempunyai hasil berbeda.':'Tidak injektif: input berbeda dapat mempunyai hasil sama.'} ${surjective?'Surjektif: seluruh kodomain tercapai.':'Tidak surjektif: ada anggota kodomain tidak tercapai.'}</p>`:`<p><strong>Bukan fungsi menuju kodomain yang dipilih:</strong> hasil ${I(texSet(image.filter(x=>!target.includes(x))))} berada di luar kodomain. Perbaiki kodomain sebelum menguji injektif atau surjektif.</p>`);
  }$('#map-rule').onchange=update;$('#map-target').onchange=update;update();
 }
 
 function s3Lab(host,id){
  const G=C.perms([0,1,2]);
- host.innerHTML=`<div class="controls">${control('s3-h','Subgrup',[['reflection','H = {e,(12)}'],['normal','A₃ = {e,(123),(132)}']],id===10?'normal':'reflection')}${control('s3-a','Wakil a',G.map((x,i)=>[i,cycle(x)]),5)}</div><div id="s3-result" aria-live="polite"></div>`;
+ host.innerHTML=`<div class="controls">${control('s3-h','Subgrup',[['reflection','H = {e,(12)}'],['normal','A₃ = {e,(123),(132)}']],id===10?'normal':'reflection')}${control('s3-a','Wakil a',G.map((x,i)=>[i,cycle(x)]),id===7?1:5)}</div><div id="s3-result" aria-live="polite"></div>`;
  const set=xs=>I('\\{'+xs.map(cycleTex).join(',\\;')+'\\}');
  function update(){const d=C.s3Cosets($('#s3-h').value,+$('#s3-a').value),equal=d.left.map(x=>x.join('')).sort().join('|')===d.right.map(x=>x.join('')).sort().join('|');
  let html=`<p>Operasi: komposisi; faktor kanan bekerja dahulu. Subgrup yang dipilih: ${set(d.H)}.</p><p>${I('a='+cycleTex(d.rep))}</p><div class="set-results"><div><h3>Koset kiri</h3><p>${set(d.left)}</p></div><div><h3>Koset kanan</h3><p>${set(d.right)}</p></div></div><p>Untuk wakil ini kedua koset <strong>${equal?'sama':'berbeda'}</strong>. Kesamaan pada satu wakil saja belum membuktikan kesamaan pada semua wakil.</p>${table(['Koset kiri yang berbeda','Koset kanan yang berbeda'],d.leftCosets.map((c,i)=>[tm('\\{'+c.values.map(cycleTex).join(',\\;')+'\\}'),tm('\\{'+d.rightCosets[i].values.map(cycleTex).join(',\\;')+'\\}')]),'Partisi kiri dan kanan S3; baris tidak menyatakan pasangan koset dengan wakil yang sama')}`;
