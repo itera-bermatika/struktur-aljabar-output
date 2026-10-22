@@ -56,7 +56,7 @@ window.GROUP_LESSONS=[
     "sections": [
       [
         "Operasi adalah pemetaan",
-        "Operasi biner pada himpunan \\(A\\) adalah pemetaan \\(A \\times  A \\to  A\\). Setiap pasangan terurut harus memperoleh tepat satu hasil dalam \\(A\\). Ketertertutupan menjadi bagian dari syarat tersebut; pembagian bukan operasi biner pada \\(\\mathbb{Z}\\) karena hasilnya tidak selalu bilangan bulat dan pembagian oleh nol tidak terdefinisi."
+        "Operasi biner pada himpunan \\(A\\) adalah pemetaan \\(A \\times  A \\to  A\\). Setiap pasangan terurut harus memperoleh tepat satu hasil dalam \\(A\\). Ketertutupan menjadi bagian dari syarat tersebut; pembagian bukan operasi biner pada \\(\\mathbb{Z}\\) karena hasilnya tidak selalu bilangan bulat dan pembagian oleh nol tidak terdefinisi. Buku ini tetap mencantumkan ketertutupan secara eksplisit sebagai aksioma pertama grup, diikuti asosiativitas, identitas, dan invers."
       ],
       [
         "Domain, kodomain, citra",
@@ -91,7 +91,7 @@ window.GROUP_LESSONS=[
     "title": "Grup",
     "part": "Bahasa dasar",
     "time": 12,
-    "lead": "Satu operasi. Tiga aksioma di atas operasi biner: asosiatif, identitas, dan invers.",
+    "lead": "Satu operasi pada himpunan tak kosong. Empat aksioma: ketertutupan, asosiativitas, identitas, dan invers.",
     "goals": [
       "Memeriksa aksioma grup dengan asumsi jelas",
       "Membedakan grup dan grup abelian"
@@ -99,7 +99,15 @@ window.GROUP_LESSONS=[
     "sections": [
       [
         "Definisi yang mengikat contoh",
-        "Grup adalah himpunan tak kosong \\(G\\) dengan operasi biner yang asosiatif, mempunyai identitas dua sisi \\(e\\), dan setiap \\(a\\) mempunyai invers dua sisi \\(a^{-1}\\). Komutativitas tidak disyaratkan. Jika \\(ab = ba\\) untuk semua \\(a\\) dan \\(b\\), grup disebut abelian."
+        "Grup adalah pasangan \\((G,*)\\), dengan \\(G\\) himpunan tak kosong dan \\(*\\) satu operasi biner, yang memenuhi empat aksioma berikut secara berurutan."
+      ],
+      [
+        "Empat aksioma grup",
+        "(1) Ketertutupan: untuk setiap \\(a,b\\in G\\), berlaku \\(a*b\\in G\\). (2) Asosiativitas: untuk setiap \\(a,b,c\\in G\\), berlaku \\((a*b)*c=a*(b*c)\\). (3) Identitas: ada \\(e\\in G\\) sehingga \\(e*a=a*e=a\\) untuk setiap \\(a\\in G\\). (4) Invers: untuk setiap \\(a\\in G\\), ada \\(a^{-1}\\in G\\) sehingga \\(a*a^{-1}=a^{-1}*a=e\\)."
+      ],
+      [
+        "Konvensi dan grup abelian",
+        "Ketertutupan sudah tercakup dalam definisi operasi biner \\(*:G\\times G\\to G\\), tetapi tetap dicantumkan sebagai aksioma pertama sesuai konvensi buku ini. Komutativitas merupakan syarat tambahan: jika \\(a*b=b*a\\) untuk semua \\(a,b\\in G\\), grup disebut abelian."
       ],
       [
         "Identitas dan invers itu unik",
@@ -114,10 +122,10 @@ window.GROUP_LESSONS=[
         "\\(\\mathbb{Z}\\) dengan penjumlahan adalah grup abelian. \\(\\mathbb{Z}\\) dengan perkalian bukan grup: \\(0\\) tidak memiliki invers perkalian, dan kebanyakan bilangan bulat lain juga tidak. Semua matriks real invertibel berukuran tetap membentuk grup dengan perkalian, yang umumnya tidak abelian."
       ]
     ],
-    "example": "Di \\(\\mathbb{Z}_{6}\\) dengan penjumlahan, identitasnya \\(0\\). Invers \\(2\\) adalah \\(4\\) karena \\(2 + 4 \\equiv  0 (\\mod  6)\\). Notasi invers aditif adalah \\(-2\\); ini bukan kebalikan pecahan \\(\\frac{1}{2}\\).",
-    "pitfall": "Adanya identitas dan invers saja belum cukup jika asosiativitas belum diketahui. Aturan juga harus merupakan operasi biner pada himpunan yang dipilih.",
+    "example": "Pada \\(\\mathbb{Z}_{6}\\) dengan penjumlahan: (1) jumlah dua kelas tetap kelas dalam \\(\\mathbb{Z}_{6}\\); (2) asosiativitas diwarisi dari penjumlahan bilangan bulat; (3) identitasnya \\([0]\\); (4) invers \\([a]\\) adalah \\([-a]\\). Misalnya, invers \\([2]\\) adalah \\([4]\\) karena \\(2+4\\equiv0\\pmod{6}\\). Invers aditif ini bukan kebalikan pecahan \\(\\frac12\\).",
+    "pitfall": "Periksa keempat aksioma pada himpunan dan operasi yang sama: ketertutupan, asosiativitas, identitas, dan invers. Identitas dan invers saja belum cukup. Komutativitas tidak diwajibkan untuk setiap grup.",
     "lab": "operation",
-    "prompt": "Cari identitas dan invers pada tiga jenis operasi. Bedakan semua kelas residu dengan himpunan unit.",
+    "prompt": "Periksa empat aksioma pada setiap pilihan operasi. Amati mengapa semua kelas residu dengan perkalian dapat gagal menjadi grup, sedangkan himpunan unit membentuk grup.",
     "quiz": {
       "q": "Sifat mana yang bukan syarat wajib setiap grup?",
       "choices": [
@@ -126,7 +134,7 @@ window.GROUP_LESSONS=[
         "Komutatif"
       ],
       "answer": 2,
-      "why": "Grup yang juga komutatif disebut abelian. Permutasi dan matriks invertibel menyediakan contoh grup nonabelian."
+      "why": "Empat aksioma grup adalah ketertutupan, asosiativitas, identitas, dan invers. Komutativitas merupakan syarat tambahan bagi grup abelian. Permutasi dan matriks invertibel menyediakan contoh grup nonabelian."
     }
   },
   {
@@ -142,11 +150,11 @@ window.GROUP_LESSONS=[
     "sections": [
       [
         "Subhimpunan dengan operasi yang sama",
-        "\\(H \\subseteq  G\\) disebut subgrup jika \\(H\\) sendiri merupakan grup dengan operasi dari \\(G\\). Kita tidak bebas mengganti operasi. Asosiativitas diwarisi dari \\(G\\), tetapi identitas, ketertertutupan, dan invers harus tetap tinggal di \\(H\\)."
+        "\\(H \\subseteq  G\\) disebut subgrup jika \\(H\\) sendiri merupakan grup dengan operasi dari \\(G\\). Kita tidak bebas mengganti operasi. Asosiativitas diwarisi dari \\(G\\), tetapi identitas, ketertutupan, dan invers harus tetap tinggal di \\(H\\)."
       ],
       [
         "Kriteria satu langkah",
-        "Untuk subhimpunan tak kosong \\(H\\) dari grup \\(G\\), cukup memeriksa bahwa \\(ab^{-1} \\in  H\\) untuk semua \\(a,b \\in  H\\). Mengambil \\(a = b\\) menghasilkan identitas; memakai identitas memberi invers; gabungan langkah itu memberi ketertertutupan."
+        "Untuk subhimpunan tak kosong \\(H\\) dari grup \\(G\\), cukup memeriksa bahwa \\(ab^{-1} \\in  H\\) untuk semua \\(a,b \\in  H\\). Mengambil \\(a = b\\) menghasilkan identitas; memakai identitas memberi invers; gabungan langkah itu memberi ketertutupan."
       ],
       [
         "Bahasa aditif",
@@ -451,7 +459,7 @@ window.GROUP_LESSONS=[
       ],
       [
         "Elemen kuosien adalah koset",
-        "Identitas \\(G/N\\) adalah \\(N\\), bukan satu elemen \\(e\\) dari \\(G\\). Invers \\(aN\\) adalah \\(a^{-1}N\\). Jika \\(G\\) hingga, \\(|G/N| = [G:N]\\). Jangan mencampur jumlah anggota sebuah koset dengan jumlah koset."
+        "Identitas \\(G/N\\) adalah \\(N\\), bukan satu elemen \\(e\\) dari \\(G\\). Invers \\(aN\\) adalah \\(a^{-1}N\\). Jika \\(G\\) hingga, \\(|G/N| = [G:N]\\). Jangan mencampur jumlah anggota sebuah koset dengan jumlah koset. Setelah operasi terdefinisi dengan baik, empat aksioma diperiksa: \\((aN)(bN)=(ab)N\\in G/N\\) memberi ketertutupan, asosiativitas diwarisi dari \\(G\\), identitasnya \\(N\\), dan inversnya \\(a^{-1}N\\)."
       ],
       [
         "Kernel selalu normal",

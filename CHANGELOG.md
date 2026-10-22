@@ -1,5 +1,12 @@
 # Riwayat Perubahan
 
+## Web 0.3 — 22 Oktober 2026
+
+- Empat aksioma grup dinyatakan eksplisit: ketertutupan, asosiativitas, identitas, invers.
+- Penyelarasan definisi, contoh, kuis, subgrup, dan grup kuosien.
+- Laboratorium operasi menampilkan pemeriksaan keempat aksioma.
+- PDF publik diselaraskan dengan revisi buku empat aksioma.
+
 ## Web 0.2.1 — 22 Oktober 2026
 
 - Penyelarasan rumus sebaris ke garis dasar teks, tanpa padding vertikal.
