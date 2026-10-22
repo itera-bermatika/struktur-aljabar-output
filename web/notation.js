@@ -17,7 +17,10 @@
      if(!n.isConnected)continue;
      const tex=n.dataset.tex,display=n.dataset.display==='block';
      try{
-      const result=await window.MathJax.tex2svgPromise(tex,{display,em:16,ex:8,containerWidth:Math.max(240,n.parentElement?.clientWidth||800)});
+      const size=parseFloat(getComputedStyle(n).fontSize)||16;
+      const result=await window.MathJax.tex2svgPromise(tex,{display,em:size,ex:size/2,containerWidth:n.parentElement?.clientWidth||document.documentElement.clientWidth});
+      const graphic=result.querySelector('svg');
+      if(graphic)for(const dimension of ['width','height']){const value=graphic.getAttribute(dimension);if(value)graphic.style.setProperty(dimension,value,'important');}
       if(!n.isConnected||n.dataset.tex!==tex)continue;
       if(result.querySelector('[data-mml-node="merror"],mjx-merror'))throw Error('Sumber rumus tidak sah');
       observer.disconnect();n.replaceChildren(result);n.dataset.mathState='ready';observe();

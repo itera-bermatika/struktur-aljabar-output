@@ -1,5 +1,11 @@
 # Riwayat Perubahan
 
+## Web 0.2.1 — 22 Oktober 2026
+
+- Penyelarasan posisi rumus sebaris mengikuti Fondasi Matematika.
+- Ukuran rumus mengikuti ukuran huruf setempat, termasuk pada ponsel.
+- Gulir rumus ditempatkan pada pembungkus agar garis dasar SVG terjaga.
+
 ## Web 0.2 — 22 Oktober 2026
 
 - MathJax 4.1.3 dengan STIX Two, disajikan bersama web tanpa CDN.
