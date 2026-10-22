@@ -13,7 +13,7 @@ hingga isomorfisme. Versi ini menyatukan revisi awal Bab 0–13 dalam
 
 ## Baca buku
 
-[Unduh PDF lengkap](Bacaan_Struktur_Aljabar_I_Grup.pdf)
+[Buka PDF lengkap](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_I_Grup.pdf)
 
 ## Cakupan
 
