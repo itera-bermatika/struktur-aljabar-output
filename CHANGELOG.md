@@ -2,7 +2,7 @@
 
 ## Web 0.2.1 — 22 Oktober 2026
 
-- Penyelarasan posisi rumus sebaris mengikuti Fondasi Matematika.
+- Penyelarasan rumus sebaris ke garis dasar teks, tanpa padding vertikal.
 - Ukuran rumus mengikuti ukuran huruf setempat, termasuk pada ponsel.
 - Gulir rumus ditempatkan pada pembungkus agar garis dasar SVG terjaga.
 
