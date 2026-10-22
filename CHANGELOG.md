@@ -1,5 +1,14 @@
 # Riwayat Perubahan
 
+## Web 0.2 — 22 Oktober 2026
+
+- MathJax 4.1.3 dengan STIX Two, disajikan bersama web tanpa CDN.
+- Sumber LaTeX eksplisit pada bacaan, latihan, dan penjelasan jawaban.
+- Typesetting hasil laboratorium, termasuk pecahan, koset, dan pemetaan.
+- Perbaikan indeks, pangkat, himpunan, serta matriks dua dimensi.
+- Antrian rendering untuk perubahan parameter dan pergantian bahasan.
+- Pemeriksaan seluruh 14 bahasan di desktop dan ponsel.
+
 ## Web 0.1 — 22 Oktober 2026
 
 - Bacaan web pendamping Bab 0–13: 14 bahasan dan 14 jeda konsep.
