@@ -3,7 +3,7 @@ const dNames=['e','r','r²','r³','s','sr','sr²','sr³ = rs'];
 const dTex=['e','r','r^{2}','r^{3}','s','sr','sr^{2}','sr^{3}'];
 const cycleTex=p=>cycle(p).replace(/ /g,'\\,');
 function operationLab(host,id){
- host.innerHTML=`<div class="controls">${control('op-n','Modulus n',range(2,12),id===8?12:6)}${control('op-kind','Himpunan dan operasi',[['add','Semua kelas · penjumlahan'],['multiply','Semua kelas · perkalian'],['units','Hanya unit · perkalian']],id===8?'units':'add')}</div><div id="op-result" aria-live="polite"></div>`;
+ host.innerHTML=`<div class="controls">${control('op-n','Modulus \\(n\\)',range(2,12),id===8?12:6)}${control('op-kind','Himpunan dan operasi',[['add','Semua kelas · penjumlahan'],['multiply','Semua kelas · perkalian'],['units','Hanya unit · perkalian']],id===8?'units':'add')}</div><div id="op-result" aria-live="polite"></div>`;
  function update(){
   const n=+$('#op-n').value,kind=$('#op-kind').value,d=C.operation(n,kind),missing=d.inverses.filter(x=>x.b===undefined).map(x=>x.a);
   $('#op-result').innerHTML=`<div class="result-banner ${d.group?'good':'warn'}"><strong>${d.group?'Membentuk grup':'Belum membentuk grup'}</strong><span>Himpunan ${I(texSet(d.elems))}; operasi ${kind==='add'?'penjumlahan':'perkalian'} modulo ${I(String(n))}.</span></div>${table([tm(kind==='add'?'+':'\\times'),...d.elems],d.table.map((r,i)=>[d.elems[i],...r]),'Tabel operasi: pilih baris a, lalu kolom b')}
@@ -12,8 +12,8 @@ function operationLab(host,id){
  $('#op-n').onchange=update;$('#op-kind').onchange=update;update();
 }
 function cosetLab(host,id){
- let a=id===3?6:4;host.innerHTML=`<div class="controls">${control('coset-n','Modulus n',range(2,18),id===3?15:12)}<span id="generator-control"></span></div><div id="coset-result" aria-live="polite"></div>`;
- function generator(){const n=+$('#coset-n').value;a=Math.min(a,n-1);$('#generator-control').innerHTML=control('coset-a','Generator a',range(0,n-1),a);$('#coset-a').onchange=()=>{a=+$('#coset-a').value;update();};update();}
+ let a=id===3?6:4;host.innerHTML=`<div class="controls">${control('coset-n','Modulus \\(n\\)',range(2,18),id===3?15:12)}<span id="generator-control"></span></div><div id="coset-result" aria-live="polite"></div>`;
+ function generator(){const n=+$('#coset-n').value;a=Math.min(a,n-1);$('#generator-control').innerHTML=control('coset-a','Generator \\(a\\)',range(0,n-1),a);$('#coset-a').onchange=()=>{a=+$('#coset-a').value;update();};update();}
  function update(){
   const n=+$('#coset-n').value,d=C.cosets(n,a),g=C.gcd(n,a);
   if(id===3||id===4){$('#coset-result').innerHTML=`${math(String.raw`H=\langle ${a}\rangle=${texSet(d.h)}`)}<p>Jejak kelipatan mulai dari identitas:</p>${math([...C.generated(n,a),0].join('\\to '))}<p>Setelah kembali ke ${I('0')}, pola berulang. Ada ${d.h.length} anggota berbeda. Bandingkan hasil penjumlahan dua anggota dan invers setiap anggota dengan daftar ${I('H')}.</p><p>${id===4?'Banyak anggota ini sama dengan orde generator.':'Koset dan indeks akan dipelajari pada Bab 7; saat ini fokus pada subgrup yang dibangkitkan.'}</p>`;return;}
@@ -22,7 +22,7 @@ function cosetLab(host,id){
  $('#coset-n').onchange=generator;generator();
 }
 function homLab(host,id){
- host.innerHTML=`<div class="controls">${control('hom-m','Domain ℤₘ: m',range(2,18),12)}${control('hom-n','Kodomain ℤₙ: n',range(2,18),6)}${control('hom-k','Pengali k',range(0,17),2)}</div><div id="hom-result" aria-live="polite"></div>`;
+ host.innerHTML=`<div class="controls">${control('hom-m','Domain \\(\\mathbb Z_m\\): \\(m\\)',range(2,18),12)}${control('hom-n','Kodomain \\(\\mathbb Z_n\\): \\(n\\)',range(2,18),6)}${control('hom-k','Pengali \\(k\\)',range(0,17),2)}</div><div id="hom-result" aria-live="polite"></div>`;
  function update(){
   const m=+$('#hom-m').value,n=+$('#hom-n').value,k=+$('#hom-k').value,d=C.hom(m,n,k);
   if(!d.valid){$('#hom-result').innerHTML=`<div class="result-banner warn"><strong>Aturan pada kelas residu belum sah.</strong><span>${I(String.raw`${n}\nmid ${k}\cdot ${m}=${k*m}`)}.</span></div><p>Wakil ${I('0')} dan ${I(String(m))} menyatakan elemen yang sama pada ${I(String.raw`\mathbb{Z}_{${m}}`)}, tetapi aturan memberi ${I('[0]')} dan ${I(`[${C.mod(k*m,n)}]`)} pada ${I(String.raw`\mathbb{Z}_{${n}}`)}. Hasil bergantung pada wakil. Karena itu kita tidak menyebut daftar output ini kernel atau citra homomorfisme.</p>`;return;}
@@ -32,7 +32,7 @@ function homLab(host,id){
  ['hom-m','hom-n','hom-k'].forEach(s=>$('#'+s).onchange=update);update();
 }
 function permutationLab(host){
- const ps=C.perms([0,1,2]);host.innerHTML=`<div class="controls">${control('sigma','Permutasi σ',ps.map((p,i)=>[i,cycle(p)]),2)}${control('tau','Permutasi τ',ps.map((p,i)=>[i,cycle(p)]),1)}</div><div id="perm-result" aria-live="polite"></div>`;
+ const ps=C.perms([0,1,2]);host.innerHTML=`<div class="controls">${control('sigma','Permutasi \\(\\sigma\\)',ps.map((p,i)=>[i,cycle(p)]),2)}${control('tau','Permutasi \\(\\tau\\)',ps.map((p,i)=>[i,cycle(p)]),1)}</div><div id="perm-result" aria-live="polite"></div>`;
  function update(){
   const p=ps[+$('#sigma').value],q=ps[+$('#tau').value],pq=C.compose(p,q),qp=C.compose(q,p),same=pq.every((x,i)=>x===qp[i]);
   $('#perm-result').innerHTML=`${math(String.raw`\sigma\tau=${cycleTex(pq)},\qquad \tau\sigma=${cycleTex(qp)}`)}${table([tm('x'),tm('\\tau(x)'),tm('\\sigma(\\tau(x))'),tm('\\sigma(x)'),tm('\\tau(\\sigma(x))')],[0,1,2].map(i=>[i+1,q[i]+1,pq[i]+1,p[i]+1,qp[i]+1]),'Ikuti jalur kanan lebih dahulu')}<p class="result-banner ${same?'good':'warn'}">${same?'Pasangan ini komutatif.':'Pasangan ini tidak komutatif: '+I('\\sigma\\tau\\ne\\tau\\sigma')+'.'}</p><p>Invers ${I('\\sigma')} adalah ${I(cycleTex(C.inverse(p)))}; invers ${I('\\tau')} adalah ${I(cycleTex(C.inverse(q)))}. Identitas ${I('e')} membiarkan semua titik tetap.</p>`;
@@ -44,7 +44,7 @@ function square(p,colors){
  return `<svg class="square" viewBox="0 0 300 300" role="img" aria-label="Persegi: posisi 1 kanan, 2 atas, 3 kiri, 4 bawah. Label asal bergerak mengikuti transformasi."><polygon points="260,150 150,40 40,150 150,260" fill="none" stroke="currentColor" stroke-width="2"/>${pts.map(([x,y],i)=>`<g><circle cx="${x}" cy="${y}" r="23" fill="${colors?(colors[pre[i]]==='M'?'#aa4f37':'#17647a'):'#123c45'}"/><text x="${x}" y="${y+5}" text-anchor="middle" fill="white" font-size="17">${colors?colors[pre[i]]:pre[i]+1}</text><text x="${x+(x===260?33:x===40?-33:0)}" y="${y+(y===40?-30:y===260?40:5)}" text-anchor="middle" fill="currentColor" font-size="12">${i+1}</text></g>`).join('')}</svg>`;
 }
 function dihedralLab(host){
- host.innerHTML=`<div class="controls">${control('d-first','Transformasi g',dNames.map((x,i)=>[i,x]),1)}${control('d-second','Transformasi h (bekerja dahulu)',dNames.map((x,i)=>[i,x]),4)}</div><div id="d-result" aria-live="polite"></div>`;
+ host.innerHTML=`<div class="controls">${control('d-first','Transformasi \\(g\\)',dNames.map((x,i)=>[i,x]),1)}${control('d-second','Transformasi \\(h\\) (bekerja dahulu)',dNames.map((x,i)=>[i,x]),4)}</div><div id="d-result" aria-live="polite"></div>`;
  function update(){
   const g=C.dihedral[+$('#d-first').value],h=C.dihedral[+$('#d-second').value],p=C.compose(g,h),rev=C.compose(h,g),idx=C.dihedral.findIndex(q=>q.every((x,i)=>x===p[i]));
   $('#d-result').innerHTML=`<div class="diagram-row"><div><h3>Sebelum</h3>${square([0,1,2,3])}</div><div><h3>Sesudah ${I(`gh=${dTex[idx]}`)}</h3>${square(p)}</div></div>${table(['Label asal','Setelah '+tm('h'),'Setelah '+tm('g\\circ h')],[0,1,2,3].map(i=>[i+1,h[i]+1,p[i]+1]),'Tabel perpindahan titik sudut')}${math(`gh=${cycleTex(p)},\\qquad hg=${cycleTex(rev)}`)}<p>${p.every((x,i)=>x===rev[i])?'Untuk pasangan ini, hasilnya sama.':'Untuk pasangan ini, urutan menghasilkan transformasi berbeda.'}</p><p>Angka kecil di luar titik adalah posisi tetap. Angka putih di dalam titik adalah label asal yang berpindah. Konvensi ${I('r=(1\\,2\\,3\\,4)')}, ${I('s=(2\\,4)')}.</p>`;
@@ -71,13 +71,13 @@ function mappingLab(host){
 
 function s3Lab(host,id){
  const G=C.perms([0,1,2]);
- host.innerHTML=`<div class="controls">${control('s3-h','Subgrup',[['reflection','H = {e,(12)}'],['normal','A₃ = {e,(123),(132)}']],id===10?'normal':'reflection')}${control('s3-a','Wakil a',G.map((x,i)=>[i,cycle(x)]),id===7?1:5)}</div><div id="s3-result" aria-live="polite"></div>`;
+ host.innerHTML=`<div class="controls">${control('s3-h','Subgrup',[['reflection','H = {e,(12)}'],['normal','A₃ = {e,(123),(132)}']],id===10?'normal':'reflection')}${control('s3-a','Wakil \\(a\\)',G.map((x,i)=>[i,cycle(x)]),id===7?1:5)}</div><div id="s3-result" aria-live="polite"></div>`;
  const set=xs=>I('\\{'+xs.map(cycleTex).join(',\\;')+'\\}');
  function update(){const d=C.s3Cosets($('#s3-h').value,+$('#s3-a').value),equal=d.left.map(x=>x.join('')).sort().join('|')===d.right.map(x=>x.join('')).sort().join('|');
- let html=`<p>Operasi: komposisi; faktor kanan bekerja dahulu. Subgrup yang dipilih: ${set(d.H)}.</p><p>${I('a='+cycleTex(d.rep))}</p><div class="set-results"><div><h3>Koset kiri</h3><p>${set(d.left)}</p></div><div><h3>Koset kanan</h3><p>${set(d.right)}</p></div></div><p>Untuk wakil ini kedua koset <strong>${equal?'sama':'berbeda'}</strong>. Kesamaan pada satu wakil saja belum membuktikan kesamaan pada semua wakil.</p>${table(['Koset kiri yang berbeda','Koset kanan yang berbeda'],d.leftCosets.map((c,i)=>[tm('\\{'+c.values.map(cycleTex).join(',\\;')+'\\}'),tm('\\{'+d.rightCosets[i].values.map(cycleTex).join(',\\;')+'\\}')]),'Partisi kiri dan kanan S3; baris tidak menyatakan pasangan koset dengan wakil yang sama')}`;
+ let html=`<p>Operasi: komposisi; faktor kanan bekerja dahulu. Subgrup yang dipilih: ${set(d.H)}.</p><p>${I('a='+cycleTex(d.rep))}</p><div class="set-results"><div><h3>Koset kiri</h3><p>${set(d.left)}</p></div><div><h3>Koset kanan</h3><p>${set(d.right)}</p></div></div><p>Untuk wakil ini kedua koset <strong>${equal?'sama':'berbeda'}</strong>. Kesamaan pada satu wakil saja belum membuktikan kesamaan pada semua wakil.</p>${table(['Koset kiri yang berbeda','Koset kanan yang berbeda'],d.leftCosets.map((c,i)=>[tm('\\{'+c.values.map(cycleTex).join(',\\;')+'\\}'),tm('\\{'+d.rightCosets[i].values.map(cycleTex).join(',\\;')+'\\}')]),'Partisi kiri dan kanan \\(S_3\\); baris tidak menyatakan pasangan koset dengan wakil yang sama')}`;
  if(id===10){html+=`<p><strong>${d.normal?'Normal':'Tidak normal'}.</strong> ${d.normal?'Seluruh enam wakil memberikan koset kiri sama dengan kanan.':'Ada wakil yang koset kiri dan kanannya berbeda.'}</p>`;
- if(d.witness){const w=d.witness;html+=`<div class="caution"><h3>Dua wakil, dua hasil</h3><p>Koset pertama H dapat diwakili ${I(cycleTex(w.first))} atau ${I(cycleTex(w.alternate))}. Koset kedua diwakili ${I(cycleTex(w.second))}. Hasil percobaan perkalian adalah:</p><p>Dengan wakil pertama: ${set(w.result1)}.</p><p>Dengan wakil alternatif: ${set(w.result2)}.</p><p>Hasil berbeda untuk pasangan koset yang sama. Jadi aturan ini belum memberi operasi pada himpunan koset.</p></div>`;}
- else{html+=table(['×',...d.leftCosets.map((_,i)=>tm('C_'+i))],d.quotient.map((r,i)=>[tm('C_'+i),...r.map(x=>tm('C_'+x))]),'Tabel operasi grup kuosien S3/A3')+`<p>${I('C_0=A_3')} dan ${I('C_1=(12)A_3')}. Setiap simbol C menyatakan sebuah koset, bukan satu permutasi. Ketertutupan terlihat pada tabel, asosiativitas diwarisi dari S3, identitas C0, dan masing-masing koset adalah inversnya sendiri.</p>`;}}
+ if(d.witness){const w=d.witness;html+=`<div class="caution"><h3>Dua wakil, dua hasil</h3><p>Koset pertama ${I('H')} dapat diwakili ${I(cycleTex(w.first))} atau ${I(cycleTex(w.alternate))}. Koset kedua diwakili ${I(cycleTex(w.second))}. Hasil percobaan perkalian adalah:</p><p>Dengan wakil pertama: ${set(w.result1)}.</p><p>Dengan wakil alternatif: ${set(w.result2)}.</p><p>Hasil berbeda untuk pasangan koset yang sama. Jadi aturan ini belum memberi operasi pada himpunan koset.</p></div>`;}
+ else{html+=table([tm('\\times'),...d.leftCosets.map((_,i)=>tm('C_'+i))],d.quotient.map((r,i)=>[tm('C_'+i),...r.map(x=>tm('C_'+x))]),'Tabel operasi grup kuosien \\(S_3/A_3\\)')+`<p>${I('C_0=A_3')} dan ${I('C_1=(12)A_3')}. Setiap simbol ${I('C_i')} menyatakan sebuah koset, bukan satu permutasi. Ketertutupan terlihat pada tabel, asosiativitas diwarisi dari ${I('S_3')}, identitas ${I('C_0')}, dan masing-masing koset adalah inversnya sendiri.</p>`;}}
  $('#s3-result').innerHTML=html;
  }$('#s3-h').onchange=update;$('#s3-a').onchange=update;update();
 }

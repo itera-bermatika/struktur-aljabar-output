@@ -1,5 +1,13 @@
 # Riwayat Perubahan
 
+## Web 0.7 — Cakupan MathJax, 23 Oktober 2026
+
+- Penandaan matematika inline dilengkapi pada semua 14 bab, termasuk bukti, petunjuk, pembahasan, rubrik, refleksi, evaluasi, dan umpan balik kuis.
+- Ekspresi koset, kuosien dan peta terinduksi disatukan dalam satu sumber rumus.
+- Nilai numerik pada tabel serta simbol dalam label dan penjelasan laboratorium dirender dengan MathJax.
+- Kontrol pilihan native dan label diagram tetap memakai representasi teks yang sesuai fungsinya.
+- Pemeriksaan sumber, kesetaraan isi sebelum/sesudah penandaan, perhitungan, dan render 14 bab lulus.
+
 ## Web 0.7 — Koreksi matematis mikro, 23 Oktober 2026
 
 - Kuis Bab 0 membedakan pemeriksaan sebagian kasus dari pemeriksaan lengkap domain hingga.

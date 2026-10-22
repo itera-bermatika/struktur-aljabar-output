@@ -7,13 +7,13 @@ let memory={read:[],quiz:[],notes:{},evaluations:{},last:0},storage=true;
 try{const old=JSON.parse(localStorage.getItem(KEY)||'null');if(old&&Array.isArray(old.read)&&Array.isArray(old.quiz))memory={...memory,...old,notes:old.notes||{},evaluations:old.evaluations||{}};}catch{storage=false;}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(memory));}catch{storage=false;}}
 const setText=a=>'{'+a.join(', ')+'}';
-const fmt=s=>window.GrupNotation.format(s);
+const fmt=s=>typeof s==='number'?window.GrupNotation.inline(String(s)):window.GrupNotation.format(s);
 const I=s=>window.GrupNotation.inline(s);
 const math=s=>window.GrupNotation.display(s);
 const tm=s=>'\\('+s+'\\)';
 const texSet=a=>'\\{'+a.join(', ')+'\\}';
-function table(headers,rows,caption){return `<div class="table-scroll" tabindex="0" role="region" aria-label="${esc(caption)}"><table><caption>${esc(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${fmt(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((x,i)=>i===0?`<th scope="row">${fmt(x)}</th>`:`<td>${fmt(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
-function control(id,label,options,value){return `<label class="control" for="${id}"><span>${label}</span><select id="${id}">${options.map(o=>{const v=typeof o==='object'?o[0]:o;const t=typeof o==='object'?o[1]:o;return `<option value="${esc(v)}" ${String(v)===String(value)?'selected':''}>${esc(t)}</option>`;}).join('')}</select></label>`;}
+function table(headers,rows,caption){return `<div class="table-scroll" tabindex="0" role="region" aria-label="${esc(caption)}"><table><caption>${fmt(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${fmt(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((x,i)=>i===0?`<th scope="row">${fmt(x)}</th>`:`<td>${fmt(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
+function control(id,label,options,value){return `<label class="control" for="${id}"><span>${fmt(label)}</span><select id="${id}">${options.map(o=>{const v=typeof o==='object'?o[0]:o;const t=typeof o==='object'?o[1]:o;return `<option value="${esc(v)}" ${String(v)===String(value)?'selected':''}>${esc(t)}</option>`;}).join('')}</select></label>`;}
 const range=(a,b)=>Array.from({length:b-a+1},(_,i)=>a+i);
 function cycle(p){const seen=new Set(),cycles=[];p.forEach((_,i)=>{if(seen.has(i))return;let x=i,a=[];do{a.push(x+1);seen.add(x);x=p[x];}while(x!==i);if(a.length>1)cycles.push('('+a.join(' ')+')');});return cycles.join('')||'e';}
 function home(){document.title='Grup — Bacaan Struktur Aljabar';const count=memory.read.filter(i=>L[i]).length;

@@ -1,15 +1,15 @@
 {
   "version": "0.7",
-  "release": "0.7-017b187b9d18",
+  "release": "0.7-b463d738b9ca",
   "normalization": "UTF-8; CRLF normalized to LF",
   "assets": {
     "style.css": "227733192fd999c79b2f656ed5d9012374005a13b3d191added87b04a9e23024",
     "mathjax-config.js": "d6e66da436ea1bd1024120cae883956d0f8066c238b7a47f6e42d02a1120cb96",
     "vendor/mathjax/tex-mml-svg.js": "f2d1b40413f9c631ce5a074d10727716f89e8099b61a0fd083316eadf3abe173",
     "notation.js": "8d2f5a3633bbea5742666e571c8674c4cae1a91b77c378a4899475cee6b371f7",
-    "lessons.js": "37fc77eb7162e56a495e2a424fffdc3a1efc7dab67372cd420c0f7afc5e812e8",
+    "lessons.js": "14b6914a11a415d9516d74f92512f208ab3f1dec35111031a0d0030f353508be",
     "core.js": "46f8dcbfee1bf9ec5a274353f9fff2049135cc2ac84536c998bd0aba80969702",
-    "labs.js": "c6fbe4cf7f96843c70d4c75cb1e34ce16e96e038bb4b3334ab853f1af1099c9d",
-    "app.js": "ec8b014a41898163e790f921165cff35665ea3d86a9ffc067d4cbb90a28fc39a"
+    "labs.js": "730d3dcd265f4e3075a60163f97df569e6aa5f0ab37f2508236476b69ff63a70",
+    "app.js": "808d09f54339e8348794d8189bfbb26017cc401b5e32e9772e1e13079388497c"
   }
 }

@@ -60,7 +60,7 @@ window.GROUP_LESSONS=[
         "title": "Satu hitungan dan pernyataan untuk semua",
         "steps": [
           "Persamaan \\((2+3)+4=2+(3+4)\\) adalah satu pemeriksaan. Ia tidak sendirian membuktikan klaim tentang setiap tiga bilangan bulat.",
-          "Sifat asosiatif penjumlahan menyatakan \\((a+b)+c=a+(b+c)\\) untuk semua bilangan bulat a,b,c. Kita boleh memakai sifat bilangan bulat yang sudah dikenal, tetapi harus membedakan sifat umum itu dari beberapa hitungan.",
+          "Sifat asosiatif penjumlahan menyatakan \\((a+b)+c=a+(b+c)\\) untuk semua bilangan bulat \\(a,b,c\\). Kita boleh memakai sifat bilangan bulat yang sudah dikenal, tetapi harus membedakan sifat umum itu dari beberapa hitungan.",
           "Ketika nanti operasinya baru, sifat asosiatif perlu dibuktikan untuk aturan baru tersebut. Kemiripan simbol tidak cukup."
         ]
       },
@@ -77,8 +77,8 @@ window.GROUP_LESSONS=[
       "title": "Bukti terpandu: mengapa jumlah bilangan genap tetap genap?",
       "steps": [
         "Tujuan: menunjukkan jumlah dua bilangan genap selalu genap. Jangan hanya memilih dua contoh tertentu.",
-        "Ambil bilangan genap sebarang a dan b. Ada bilangan bulat m,n sehingga \\(a=2m\\) dan \\(b=2n\\).",
-        "Maka \\(a+b=2m+2n=2(m+n)\\). Karena m+n bilangan bulat, bentuk ini memenuhi definisi bilangan genap.",
+        "Ambil bilangan genap sebarang \\(a\\) dan \\(b\\). Ada bilangan bulat \\(m,n\\) sehingga \\(a=2m\\) dan \\(b=2n\\).",
+        "Maka \\(a+b=2m+2n=2(m+n)\\). Karena \\(m+n\\) bilangan bulat, bentuk ini memenuhi definisi bilangan genap.",
         "Jadi kesimpulan berlaku untuk semua pasangan genap. Pola memilih elemen sebarang lalu memakai definisi akan terus dipakai dalam teori grup."
       ]
     },
@@ -98,18 +98,18 @@ window.GROUP_LESSONS=[
       {
         "q": "Bantah klaim bahwa setiap bilangan bulat mempunyai kebalikan perkalian yang juga bulat.",
         "hint": "Coba elemen 2.",
-        "answer": "Jika 2 mempunyai invers bilangan bulat b, harus \\(2b=1\\). Ini memerlukan \\(b=1/2\\), bukan bilangan bulat.",
+        "answer": "Jika 2 mempunyai invers bilangan bulat \\(b\\), harus \\(2b=1\\). Ini memerlukan \\(b=1/2\\), bukan bilangan bulat.",
         "rubric": "Satu elemen sah dalam himpunan dan alasan kegagalan inversnya."
       },
       {
         "q": "Buktikan selisih dua bilangan ganjil selalu genap.",
         "hint": "Tuliskan bentuk \\(2m+1\\) dan \\(2n+1\\).",
-        "answer": "\\((2m+1)-(2n+1)=2(m-n)\\), kelipatan 2 karena m−n bilangan bulat.",
+        "answer": "\\((2m+1)-(2n+1)=2(m-n)\\), kelipatan 2 karena \\(m-n\\) bilangan bulat.",
         "rubric": "Menggunakan dua bilangan ganjil sebarang."
       },
       {
         "q": "Pada bilangan bulat, apakah aturan \\(a*b=a+b+1\\) memiliki elemen yang tidak mengubah semua input?",
-        "hint": "Cari e agar \\(a+e+1=a\\).",
+        "hint": "Cari \\(e\\) agar \\(a+e+1=a\\).",
         "answer": "Ya, \\(e=-1\\): \\(a*(-1)=a\\) dan \\((-1)*a=a\\). Identitas bergantung pada aturan operasi, bukan kebiasaan memakai 0 atau 1.",
         "rubric": "Memeriksa kedua sisi untuk input sebarang."
       }
@@ -128,7 +128,7 @@ window.GROUP_LESSONS=[
     ],
     "assessment": {
       "q": "Buktikan jumlah bilangan genap dan bilangan ganjil selalu ganjil. Jelaskan mengapa dua hitungan contoh saja belum cukup.",
-      "answer": "Untuk bilangan bulat m,n, \\(2m+(2n+1)=2(m+n)+1\\), bentuk bilangan ganjil. Bentuk umum menjangkau semua pasangan, sedangkan contoh hanya pasangan tertentu.",
+      "answer": "Untuk bilangan bulat \\(m,n\\), \\(2m+(2n+1)=2(m+n)+1\\), bentuk bilangan ganjil. Bentuk umum menjangkau semua pasangan, sedangkan contoh hanya pasangan tertentu.",
       "rubric": [
         "Gunakan dua input sebarang.",
         "Jelaskan bentuk bilangan ganjil."
@@ -230,7 +230,7 @@ window.GROUP_LESSONS=[
     },
     "exercises": [
       {
-        "q": "Misalkan a,b,0,1 adalah empat simbol berbeda. Tuliskan semua anggota \\(\\{a,b\\}\\times\\{0,1\\}\\). Apakah \\((0,a)\\) termasuk?",
+        "q": "Misalkan \\(a,b,0,1\\) adalah empat simbol berbeda. Tuliskan semua anggota \\(\\{a,b\\}\\times\\{0,1\\}\\). Apakah \\((0,a)\\) termasuk?",
         "hint": "Perhatikan himpunan asal komponen pertama dan kedua.",
         "answer": "Anggotanya \\((a,0),(a,1),(b,0),(b,1)\\). Pasangan \\((0,a)\\) tidak termasuk.",
         "rubric": "Empat pasangan lengkap dan urutan komponen benar."
@@ -280,8 +280,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Periksa apakah f(n)=2n dari Z ke himpunan bilangan bulat genap bijektif. Lalu buktikan relasi \\(a\\sim b\\iff4\\mid(a-b)\\) pada Z merupakan relasi ekuivalensi dan sebutkan kelas sisanya.",
-      "answer": "Peta injektif karena 2a=2b memberi a=b, dan surjektif ke bilangan genap dari definisinya. Relasi refleksif karena \\(4\\mid0\\), simetris karena pembagi selisih juga membagi negatifnya, transitif karena selisih dijumlahkan. Kelas sisanya [0],[1],[2],[3] modulo 4.",
+      "q": "Periksa apakah \\(f(n)=2n\\) dari \\(\\mathbb Z\\) ke himpunan bilangan bulat genap bijektif. Lalu buktikan relasi \\(a\\sim b\\iff4\\mid(a-b)\\) pada \\(\\mathbb Z\\) merupakan relasi ekuivalensi dan sebutkan kelas sisanya.",
+      "answer": "Peta injektif karena \\(2a=2b\\) memberi \\(a=b\\), dan surjektif ke bilangan genap dari definisinya. Relasi refleksif karena \\(4\\mid0\\), simetris karena pembagi selisih juga membagi negatifnya, transitif karena selisih dijumlahkan. Kelas sisanya \\([0]\\),\\([1]\\),\\([2]\\),\\([3]\\) modulo 4.",
       "rubric": [
         "Perhatikan kodomain peta.",
         "Periksa tiga sifat relasi, bukan hanya daftar kelas."
@@ -409,12 +409,12 @@ window.GROUP_LESSONS=[
       },
       {
         "q": "Buktikan \\((ab)^{-1}=b^{-1}a^{-1}\\). Mengapa urutan faktor dibalik?",
-        "hint": "Periksa kandidat pada kedua sisi hasil kali ab.",
+        "hint": "Periksa kandidat pada kedua sisi hasil kali \\(ab\\).",
         "answer": "\\((ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=e\\) dan \\((b^{-1}a^{-1})(ab)=b^{-1}(a^{-1}a)b=e\\). Keunikan invers memberi kesimpulan. Urutan dibalik agar faktor yang saling invers berdampingan; tidak diasumsikan komutatif.",
         "rubric": "Kedua hasil kali diperiksa; tidak menukar faktor tanpa alasan."
       }
     ],
-    "reflection": "Untuk operasi a*b=a+b+1 pada bilangan bulat, jelaskan mengapa invers a bukan -a. Kaitkan jawaban dengan identitas operasi tersebut.",
+    "reflection": "Untuk operasi \\(a*b=a+b+1\\) pada bilangan bulat, jelaskan mengapa invers \\(a\\) bukan \\(-a\\). Kaitkan jawaban dengan identitas operasi tersebut.",
     "pdfPage": 63,
     "pdfPrinted": 43,
     "goalRefs": [
@@ -429,8 +429,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Pada Z, tentukan apakah \\(a*b=a+b+2\\) membentuk grup abelian. Periksa empat aksioma secara berurutan.",
-      "answer": "Tertutup di Z. Kedua pengelompokan memberi a+b+c+4. Identitas −2 dan invers a adalah −a−4, keduanya diperiksa pada dua sisi. Komutatif karena penjumlahan bilangan bulat komutatif.",
+      "q": "Pada \\(\\mathbb Z\\), tentukan apakah \\(a*b=a+b+2\\) membentuk grup abelian. Periksa empat aksioma secara berurutan.",
+      "answer": "Tertutup di \\(\\mathbb Z\\). Kedua pengelompokan memberi \\(a+b+c+4\\). Identitas \\(-2\\) dan invers \\(a\\) adalah \\(-a-4\\), keduanya diperiksa pada dua sisi. Komutatif karena penjumlahan bilangan bulat komutatif.",
       "rubric": [
         "Ketertutupan, asosiativitas, identitas, invers harus muncul.",
         "Komutativitas adalah pemeriksaan tambahan."
@@ -477,11 +477,11 @@ window.GROUP_LESSONS=[
         "\\(H=G\\)"
       ],
       "answer": 0,
-      "why": "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan H tak kosong dan membatasi H lebih jauh.",
+      "why": "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan \\(H\\) tak kosong dan membatasi \\(H\\) lebih jauh.",
       "feedback": [
-        "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan H tak kosong dan membatasi H lebih jauh.",
+        "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan \\(H\\) tak kosong dan membatasi \\(H\\) lebih jauh.",
         "Tepat dua anggota memang cukup karena menjamin tak kosong. Namun ini bukan asumsi paling lemah; kriteria juga berlaku untuk subgrup berukuran lain.",
-        "H=G memang cukup, tetapi lebih kuat daripada tak kosong. Kriteria juga berlaku untuk subgrup sejati."
+        "\\(H=G\\) memang cukup, tetapi lebih kuat daripada tak kosong. Kriteria juga berlaku untuk subgrup sejati."
       ]
     },
     "prerequisites": [
@@ -565,8 +565,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Di grup aditif \\(\\mathbb Z_{12}\\), periksa \\(H=\\{0,3,6,9\\}\\) dengan kriteria selisih. Tentukan satu generator H dan jelaskan mengapa syarat tak kosong tidak boleh dihapus.",
-      "answer": "H memuat 0; selisih dua kelipatan 3 tetap kelipatan 3 modulo 12. Generatornya [3] atau [9]. Syarat pada pasangan dari himpunan kosong benar secara vakum, tetapi himpunan kosong bukan grup.",
+      "q": "Di grup aditif \\(\\mathbb Z_{12}\\), periksa \\(H=\\{0,3,6,9\\}\\) dengan kriteria selisih. Tentukan satu generator \\(H\\) dan jelaskan mengapa syarat tak kosong tidak boleh dihapus.",
+      "answer": "\\(H\\) memuat 0; selisih dua kelipatan 3 tetap kelipatan 3 modulo 12. Generatornya \\([3]\\) atau \\([9]\\). Syarat pada pasangan dari himpunan kosong benar secara vakum, tetapi himpunan kosong bukan grup.",
       "rubric": [
         "Gunakan argumen untuk semua pasangan.",
         "Bedakan kebenaran universal dengan keberadaan identitas."
@@ -606,7 +606,7 @@ window.GROUP_LESSONS=[
       ],
       [
         "Mengapa faktor relatif prima boleh dicoret?",
-        "Langkah rumus orde memakai fakta berikut: jika \\(\\gcd(u,v)=1\\) dan \\(u\\mid kv\\), maka \\(u\\mid k\\). Identitas Bézout memberi bilangan bulat p,q dengan \\(pu+qv=1\\). Kalikan dengan k: \\(k=pku+qkv\\). Kedua suku di kanan habis dibagi u, sehingga k juga habis dibagi u. Fakta ini menjelaskan langkah relatif prima dalam bukti, bukan pencoretan sembarang."
+        "Langkah rumus orde memakai fakta berikut: jika \\(\\gcd(u,v)=1\\) dan \\(u\\mid kv\\), maka \\(u\\mid k\\). Identitas \\(B\\)ézout memberi bilangan bulat \\(p,q\\) dengan \\(pu+qv=1\\). Kalikan dengan \\(k\\): \\(k=pku+qkv\\). Kedua suku di kanan habis dibagi \\(u\\), sehingga \\(k\\) juga habis dibagi \\(u\\). Fakta ini menjelaskan langkah relatif prima dalam bukti, bukan pencoretan sembarang."
       ]
     ],
     "example": "Di \\(\\mathbb{Z}_{12}\\), kelipatan \\(8\\) adalah \\(0,8,4\\), lalu kembali ke \\(0\\). Jadi \\(\\operatorname{ord}([8]) = 3 = \\frac{12}{\\gcd(12,8)}\\). Subgrup yang dibangkitkan \\(8\\) sama dengan yang dibangkitkan \\(4\\).",
@@ -623,7 +623,7 @@ window.GROUP_LESSONS=[
       "answer": 1,
       "why": "\\(\\frac{12}{\\gcd(12,8)} = 12/4 = 3\\). Tiga kali \\(8\\) adalah \\(24\\), yang sama dengan \\(0\\) modulo \\(12\\).",
       "feedback": [
-        "Wakil 8 bukan ukuran orde kelas [8].",
+        "Wakil 8 bukan ukuran orde kelas \\([8]\\).",
         "\\(\\frac{12}{\\gcd(12,8)} = 12/4 = 3\\). Tiga kali \\(8\\) adalah \\(24\\), yang sama dengan \\(0\\) modulo \\(12\\).",
         "Orde elemen tidak harus sama dengan orde seluruh grup."
       ]
@@ -636,16 +636,16 @@ window.GROUP_LESSONS=[
       {
         "title": "Menghitung orde dan seluruh generator",
         "steps": [
-          "Dalam grup aditif \\(\\mathbb Z_{18}\\), jejak kelipatan 6 ialah \\(0,6,12,0\\). Jadi \\(\\langle[6]\\rangle=\\{[0],[6],[12]\\}\\) dan orde [6] adalah 3.",
-          "Untuk [5], \\(\\gcd(18,5)=1\\), sehingga orde [5] adalah 18. Semua generator \\(\\mathbb Z_{18}\\) adalah kelas dari \\(1,5,7,11,13,17\\), yaitu wakil yang relatif prima dengan 18.",
-          "Generator subgrup kecil tidak harus generator grup induk. Kelas [6] membangkitkan subgrup berorde 3, tetapi tidak membangkitkan seluruh \\(\\mathbb Z_{18}\\)."
+          "Dalam grup aditif \\(\\mathbb Z_{18}\\), jejak kelipatan 6 ialah \\(0,6,12,0\\). Jadi \\(\\langle[6]\\rangle=\\{[0],[6],[12]\\}\\) dan orde \\([6]\\) adalah 3.",
+          "Untuk \\([5]\\), \\(\\gcd(18,5)=1\\), sehingga orde \\([5]\\) adalah 18. Semua generator \\(\\mathbb Z_{18}\\) adalah kelas dari \\(1,5,7,11,13,17\\), yaitu wakil yang relatif prima dengan 18.",
+          "Generator subgrup kecil tidak harus generator grup induk. Kelas \\([6]\\) membangkitkan subgrup berorde 3, tetapi tidak membangkitkan seluruh \\(\\mathbb Z_{18}\\)."
         ]
       },
       {
         "title": "Abelian tidak selalu siklik",
         "steps": [
           "Unit modulo 8 adalah \\(U(8)=\\{[1],[3],[5],[7]\\}\\) dengan perkalian. Perkalian kelas residu komutatif, sehingga grup ini abelian.",
-          "Kuadrat setiap elemen nonidentitas adalah [1]: \\(3^2\\equiv5^2\\equiv7^2\\equiv1\\pmod8\\). Jadi setiap elemen nonidentitas berorde 2.",
+          "Kuadrat setiap elemen nonidentitas adalah \\([1]\\): \\(3^2\\equiv5^2\\equiv7^2\\equiv1\\pmod8\\). Jadi setiap elemen nonidentitas berorde 2.",
           "Jika grup berorde 4 ini siklik, generatornya harus berorde 4. Tidak ada elemen demikian. Maka grup abelian ini tidak siklik, meskipun semua grup siklik memang abelian."
         ]
       }
@@ -653,16 +653,16 @@ window.GROUP_LESSONS=[
     "proof": {
       "title": "Bukti terpandu: rumus orde di grup aditif \\(\\mathbb Z_{n}\\)",
       "steps": [
-        "Ambil \\(n\\ge1\\) dan kelas [a]. Orde [a] adalah bilangan positif terkecil k dengan \\(ka\\equiv0\\pmod n\\), atau setara \\(n\\mid ka\\).",
+        "Ambil \\(n\\ge1\\) dan kelas \\([a]\\). Orde \\([a]\\) adalah bilangan positif terkecil \\(k\\) dengan \\(ka\\equiv0\\pmod n\\), atau setara \\(n\\mid ka\\).",
         "Tuliskan \\(d=\\gcd(n,a)\\), \\(n=dn'\\), \\(a=da'\\), dengan \\(\\gcd(n',a')=1\\). Maka \\(n\\mid ka\\) setara dengan \\(n'\\mid ka'\\).",
-        "Karena \\(n'\\) dan \\(a'\\) relatif prima, \\(n'\\mid ka'\\) mengakibatkan \\(n'\\mid k\\). Sebaliknya jika \\(n'\\) membagi k, maka n membagi ka.",
-        "Jadi k positif terkecil ialah \\(n'\\), sehingga \\(\\operatorname{ord}([a])=n/d\\). Khusus a=0, d=n dan ordenya 1.",
-        "Kelas [a] membangkitkan seluruh \\(\\mathbb Z_{n}\\) tepat ketika ordenya n, yaitu tepat ketika \\(\\gcd(n,a)=1\\). Ini orde untuk penjumlahan, bukan untuk perkalian."
+        "Karena \\(n'\\) dan \\(a'\\) relatif prima, \\(n'\\mid ka'\\) mengakibatkan \\(n'\\mid k\\). Sebaliknya jika \\(n'\\) membagi \\(k\\), maka \\(n\\) membagi \\(ka\\).",
+        "Jadi \\(k\\) positif terkecil ialah \\(n'\\), sehingga \\(\\operatorname{ord}([a])=n/d\\). Khusus \\(a=0\\), \\(d=n\\) dan ordenya 1.",
+        "Kelas \\([a]\\) membangkitkan seluruh \\(\\mathbb Z_{n}\\) tepat ketika ordenya \\(n\\), yaitu tepat ketika \\(\\gcd(n,a)=1\\). Ini orde untuk penjumlahan, bukan untuk perkalian."
       ]
     },
     "exercises": [
       {
-        "q": "Tentukan orde [10] dan subgrup yang dibangkitkannya di \\(\\mathbb Z_{15}\\).",
+        "q": "Tentukan orde \\([10]\\) dan subgrup yang dibangkitkannya di \\(\\mathbb Z_{15}\\).",
         "hint": "Hitung FPB atau daftar kelipatan sampai kembali ke nol.",
         "answer": "Ordenya \\(15/\\gcd(15,10)=3\\). Subgrupnya \\(\\{[0],[10],[5]\\}\\).",
         "rubric": "Operasi aditif dan pengulangan pertama ke nol benar."
@@ -670,17 +670,17 @@ window.GROUP_LESSONS=[
       {
         "q": "Daftarkan semua generator \\(\\mathbb Z_{10}\\).",
         "hint": "Cari wakil yang relatif prima dengan 10.",
-        "answer": "Kelas [1], [3], [7], [9]. Masing-masing berorde 10.",
+        "answer": "Kelas \\([1]\\), \\([3]\\), \\([7]\\), \\([9]\\). Masing-masing berorde 10.",
         "rubric": "Daftar lengkap, tanpa kelas yang memiliki FPB lebih dari 1."
       },
       {
         "q": "Buktikan setiap grup siklik abelian.",
         "hint": "Tulis dua elemen sebagai \\(a^i,a^j\\).",
-        "answer": "Jika \\(G=\\langle a\\rangle\\), setiap \\(x,y\\) berbentuk \\(a^i,a^j\\) untuk bilangan bulat i,j. Maka \\(xy=a^{i+j}=a^{j+i}=yx\\).",
+        "answer": "Jika \\(G=\\langle a\\rangle\\), setiap \\(x,y\\) berbentuk \\(a^i,a^j\\) untuk bilangan bulat \\(i,j\\). Maka \\(xy=a^{i+j}=a^{j+i}=yx\\).",
         "rubric": "Dua elemen sebarang, bukan hanya generator dan identitas."
       },
       {
-        "q": "Dalam grup siklik berorde 12 dengan generator a, tentukan orde \\(a^4\\) dan \\(a^8\\).",
+        "q": "Dalam grup siklik berorde 12 dengan generator \\(a\\), tentukan orde \\(a^4\\) dan \\(a^8\\).",
         "hint": "Eksponen dihitung modulo 12.",
         "answer": "Keduanya berorde 3: \\(12/\\gcd(12,4)=3\\) dan \\(12/\\gcd(12,8)=3\\). Keduanya membangkitkan subgrup yang sama, \\(\\{e,a^4,a^8\\}\\).",
         "rubric": "Jangan menyamakan orde elemen dengan eksponennya."
@@ -688,7 +688,7 @@ window.GROUP_LESSONS=[
       {
         "q": "Berikan grup tak hingga yang memiliki elemen berorde hingga selain identitas.",
         "hint": "Pertimbangkan pasangan bilangan bulat dan kelas modulo 2.",
-        "answer": "Pada \\(\\mathbb Z\\times\\mathbb Z_2\\) dengan penjumlahan komponen, elemen \\((0,[1])\\) berorde 2. Grup tak hingga karena pasangan \\((n,[0])\\) berbeda untuk setiap bilangan bulat n.",
+        "answer": "Pada \\(\\mathbb Z\\times\\mathbb Z_2\\) dengan penjumlahan komponen, elemen \\((0,[1])\\) berorde 2. Grup tak hingga karena pasangan \\((n,[0])\\) berbeda untuk setiap bilangan bulat \\(n\\).",
         "rubric": "Operasi serta alasan kedua sifat dijelaskan."
       }
     ],
@@ -709,8 +709,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Dalam grup aditif \\(\\mathbb Z_{20}\\), tentukan orde [6], subgrup yang dibangkitkannya, dan apakah [6] membangkitkan seluruh grup.",
-      "answer": "Orde \\(20/\\gcd(20,6)=10\\). Subgrupnya seluruh kelas genap, sebanyak 10 anggota. [6] bukan generator \\(\\mathbb Z_{20}\\) yang mempunyai 20 anggota.",
+      "q": "Dalam grup aditif \\(\\mathbb Z_{20}\\), tentukan orde \\([6]\\), subgrup yang dibangkitkannya, dan apakah \\([6]\\) membangkitkan seluruh grup.",
+      "answer": "Orde \\(20/\\gcd(20,6)=10\\). Subgrupnya seluruh kelas genap, sebanyak 10 anggota. \\([6]\\) bukan generator \\(\\mathbb Z_{20}\\) yang mempunyai 20 anggota.",
       "rubric": [
         "Hitung FPB dan orde.",
         "Bedakan generator subgrup dengan generator seluruh grup."
@@ -781,7 +781,7 @@ window.GROUP_LESSONS=[
         "title": "Dari tabel ke siklus lepas, invers, dan orde",
         "steps": [
           "Ambil permutasi dengan \\(1\\mapsto3,3\\mapsto4,4\\mapsto1\\), \\(2\\mapsto5,5\\mapsto2\\), dan \\(6\\mapsto6\\).",
-          "Mulai dari 1 dan ikuti sampai kembali: didapat (134). Titik terkecil yang belum dipakai adalah 2, memberi (25); 6 tetap. Jadi \\(\\sigma=(134)(25)\\).",
+          "Mulai dari 1 dan ikuti sampai kembali: didapat \\((134)\\). Titik terkecil yang belum dipakai adalah 2, memberi \\((25)\\); 6 tetap. Jadi \\(\\sigma=(134)(25)\\).",
           "Invers membalik setiap siklus: \\(\\sigma^{-1}=(143)(25)\\). Siklus lepas boleh ditukar karena bekerja pada titik berbeda.",
           "Ordenya \\(\\operatorname{KPK}(3,2)=6\\). Pangkat harus mengembalikan kedua siklus sekaligus; panjang siklus tidak dijumlahkan."
         ]
@@ -791,8 +791,8 @@ window.GROUP_LESSONS=[
       "title": "Bukti terpandu: orde produk siklus lepas",
       "steps": [
         "Misalkan \\(\\sigma=c_1\\cdots c_t\\), dengan siklus-siklus lepas berpanjang \\(m_1,\\ldots,m_t\\). Siklus lepas saling komutatif, sebab masing-masing menetapkan titik yang dipindahkan siklus lainnya.",
-        "Karena itu \\(\\sigma^k=c_1^k\\cdots c_t^k\\). Pada titik-titik siklus berpanjang \\(m_i\\), semua titik kembali tepat ketika \\(m_i\\) membagi k.",
-        "Maka \\(\\sigma^k=e\\) tepat ketika setiap \\(m_i\\) membagi k. Kita harus mencari satu k yang bekerja untuk seluruh siklus sekaligus.",
+        "Karena itu \\(\\sigma^k=c_1^k\\cdots c_t^k\\). Pada titik-titik siklus berpanjang \\(m_i\\), semua titik kembali tepat ketika \\(m_i\\) membagi \\(k\\).",
+        "Maka \\(\\sigma^k=e\\) tepat ketika setiap \\(m_i\\) membagi \\(k\\). Kita harus mencari satu \\(k\\) yang bekerja untuk seluruh siklus sekaligus.",
         "Bilangan positif terkecil yang memenuhi syarat tersebut ialah KPK panjang siklus. Jadi itulah orde permutasi. Identitas berorde 1; titik tetap tidak mengubah KPK."
       ]
     },
@@ -800,7 +800,7 @@ window.GROUP_LESSONS=[
       {
         "q": "Hitung \\((123)(12)\\) dari kanan ke kiri.",
         "hint": "Lacak titik 1,2,3 secara terpisah.",
-        "answer": "Titik 1 menuju 3, titik 3 menuju 1, dan titik 2 tetap. Hasilnya (13).",
+        "answer": "Titik 1 menuju 3, titik 3 menuju 1, dan titik 2 tetap. Hasilnya \\((13)\\).",
         "rubric": "Jejak memakai urutan faktor yang benar."
       },
       {
@@ -812,13 +812,13 @@ window.GROUP_LESSONS=[
       {
         "q": "Apakah \\((12)(34)=(34)(12)\\)? Apakah ini membuktikan \\(S_{4}\\) abelian?",
         "hint": "Siklus lepas merupakan satu kasus khusus.",
-        "answer": "Kedua produk sama karena siklus lepas. Ini tidak membuktikan \\(S_{4}\\) abelian; pasangan (12),(23) dalam \\(S_{4}\\) tetap tidak komutatif.",
+        "answer": "Kedua produk sama karena siklus lepas. Ini tidak membuktikan \\(S_{4}\\) abelian; pasangan \\((12)\\),\\((23)\\) dalam \\(S_{4}\\) tetap tidak komutatif.",
         "rubric": "Tidak menggeneralisasi dari satu pasangan."
       },
       {
         "q": "Berikan permutasi di \\(S_{5}\\) berorde 6.",
         "hint": "Gabungkan siklus lepas berpanjang 3 dan 2.",
-        "answer": "\\((123)(45)\\) berorde KPK(3,2)=6. Masing-masing siklus memakai titik berbeda.",
+        "answer": "\\((123)(45)\\) berorde \\(\\operatorname{KPK}(3,2)=6\\). Masing-masing siklus memakai titik berbeda.",
         "rubric": "Permutasi memakai paling banyak lima titik dan ordenya benar."
       },
       {
@@ -845,7 +845,7 @@ window.GROUP_LESSONS=[
     ],
     "assessment": {
       "q": "Hitung \\((124)(23)\\) di \\(S_{4}\\). Tentukan invers serta orde hasilnya dengan jejak setiap titik.",
-      "answer": "Jejak memberi 1→2, 2→3, 3→4, 4→1, sehingga hasil (1234). Invers (1432), orde 4.",
+      "answer": "Jejak memberi \\(1\\to 2\\), \\(2\\to 3\\), \\(3\\to 4\\), \\(4\\to 1\\), sehingga hasil \\((1234)\\). Invers \\((1432)\\), orde 4.",
       "rubric": [
         "Faktor kanan bekerja dahulu.",
         "Jejak mencakup seluruh empat titik."
@@ -894,20 +894,20 @@ window.GROUP_LESSONS=[
       "answer": 1,
       "why": "\\(D_{n}\\) memiliki \\(n\\) rotasi dan \\(n\\) refleksi, sehingga \\(|D_{5}| = 2 \\times  5 = 10\\).",
       "feedback": [
-        "\\(D_{n}\\) berarti grup berorde 2n pada konvensi buku ini.",
+        "\\(D_{n}\\) berarti grup berorde 2\\(n\\) pada konvensi buku ini.",
         "\\(D_{n}\\) memiliki \\(n\\) rotasi dan \\(n\\) refleksi, sehingga \\(|D_{5}| = 2 \\times  5 = 10\\).",
         "Jumlah simetri bukan kuadrat banyak sisi."
       ]
     },
     "prerequisites": [
       "Dapat menghitung permutasi dan membedakan posisi tetap dengan label yang berpindah.",
-      "Memahami pangkat, invers, dan konvensi \\(D_{n}\\) berorde 2n."
+      "Memahami pangkat, invers, dan konvensi \\(D_{n}\\) berorde 2\\(n\\)."
     ],
     "worked": [
       {
         "title": "Relasi dihedral sebagai perhitungan titik",
         "steps": [
-          "Pada persegi berlabel kanan-atas-kiri-bawah, ambil \\(r=(1234)\\), \\(s=(24)\\). Pada srs, jalankan s, lalu r, lalu s.",
+          "Pada persegi berlabel kanan-atas-kiri-bawah, ambil \\(r=(1234)\\), \\(s=(24)\\). Pada \\(srs\\), jalankan \\(s\\), lalu \\(r\\), lalu \\(s\\).",
           "Titik 1 menuju \\(1\\to1\\to2\\to4\\); titik 2 menuju \\(2\\to4\\to1\\to1\\); titik 3 menuju \\(3\\to3\\to4\\to2\\); titik 4 menuju \\(4\\to2\\to3\\to3\\).",
           "Hasilnya \\((1432)=r^{-1}\\). Refleksi membalik arah rotasi. Jadi \\(srs=r^{-1}\\) merupakan hubungan geometris yang dapat dilacak, bukan aturan hafalan tanpa alasan."
         ]
@@ -917,18 +917,18 @@ window.GROUP_LESSONS=[
         "steps": [
           "Gunakan \\(r^4=e\\), \\(s^2=e\\), dan \\(r^is=sr^{-i}\\). Dalam \\(D_{4}\\), hitung \\((sr^2)(sr)\\).",
           "\\((sr^2)(sr)=s(r^2s)r=s(sr^{-2})r=r^{-1}=r^3\\). Hasil kali dua refleksi dapat berupa rotasi.",
-          "Sebaliknya \\((sr)(sr^2)=r\\). Jadi urutan memengaruhi hasil. Pangkat r direduksi modulo 4 setelah penjumlahan atau pengurangan eksponen."
+          "Sebaliknya \\((sr)(sr^2)=r\\). Jadi urutan memengaruhi hasil. Pangkat \\(r\\) direduksi modulo 4 setelah penjumlahan atau pengurangan eksponen."
         ]
       }
     ],
     "proof": {
       "title": "Bukti terpandu: aturan produk dihedral",
       "steps": [
-        "Dari \\(srs=r^{-1}\\), mengalikan di kiri dengan s memberi \\(rs=sr^{-1}\\). Mengulang hubungan ini, serta memakai invers untuk eksponen negatif, memberi \\(r^is=sr^{-i}\\) untuk semua bilangan bulat i.",
+        "Dari \\(srs=r^{-1}\\), mengalikan di kiri dengan \\(s\\) memberi \\(rs=sr^{-1}\\). Mengulang hubungan ini, serta memakai invers untuk eksponen negatif, memberi \\(r^is=sr^{-i}\\) untuk semua bilangan bulat \\(i\\).",
         "Produk dua rotasi ialah \\(r^ir^j=r^{i+j}\\). Produk rotasi dengan refleksi berbentuk \\(r^i(sr^j)=sr^{j-i}\\).",
         "Produk refleksi dengan rotasi ialah \\((sr^i)r^j=sr^{i+j}\\). Produk dua refleksi ialah \\((sr^i)(sr^j)=r^{j-i}\\).",
-        "Semua eksponen dihitung modulo n dalam \\(D_{n}\\). Bentuk hasil selalu rotasi atau refleksi, sehingga aturan ini juga memperlihatkan ketertutupan bentuk normal.",
-        "Setiap refleksi \\(sr^i\\) berkuadrat e menurut rumus terakhir, dan bukan identitas karena membalik orientasi. Maka ordenya 2. Rotasi \\(r^i\\) dapat mempunyai orde lain."
+        "Semua eksponen dihitung modulo \\(n\\) dalam \\(D_{n}\\). Bentuk hasil selalu rotasi atau refleksi, sehingga aturan ini juga memperlihatkan ketertutupan bentuk normal.",
+        "Setiap refleksi \\(sr^i\\) berkuadrat \\(e\\) menurut rumus terakhir, dan bukan identitas karena membalik orientasi. Maka ordenya 2. Rotasi \\(r^i\\) dapat mempunyai orde lain."
       ]
     },
     "exercises": [
@@ -942,7 +942,7 @@ window.GROUP_LESSONS=[
         "q": "Hitung \\((sr^2)(sr^4)\\) dalam \\(D_{5}\\).",
         "hint": "Produk dua refleksi menghasilkan rotasi.",
         "answer": "\\((sr^2)(sr^4)=r^{4-2}=r^2\\).",
-        "rubric": "Konvensi refleksi sr^i konsisten."
+        "rubric": "Konvensi refleksi \\(sr^i\\) konsisten."
       },
       {
         "q": "Tentukan invers \\(r^k\\) dan \\(sr^k\\) dalam \\(D_{n}\\).",
@@ -953,13 +953,13 @@ window.GROUP_LESSONS=[
       {
         "q": "Buktikan rotasi-rotasi saja membentuk subgrup \\(D_{n}\\).",
         "hint": "Gunakan kriteria \\(ab^{-1}\\).",
-        "answer": "Himpunan rotasi memuat e. Untuk \\(a=r^i,b=r^j\\), diperoleh \\(ab^{-1}=r^{i-j}\\), masih rotasi. Kriteria subgrup berlaku.",
+        "answer": "Himpunan rotasi memuat \\(e\\). Untuk \\(a=r^i,b=r^j\\), diperoleh \\(ab^{-1}=r^{i-j}\\), masih rotasi. Kriteria subgrup berlaku.",
         "rubric": "Ketak-kosongan dan semua pasangan sebarang ditangani."
       },
       {
         "q": "Apakah semua elemen \\(D_{4}\\) berorde 2 karena semua refleksinya berorde 2?",
         "hint": "Periksa rotasi seperempat putaran.",
-        "answer": "Tidak. r berorde 4, \\(r^2\\) berorde 2, e berorde 1; semua refleksi berorde 2. Kesimpulan tentang refleksi tidak mencakup semua elemen.",
+        "answer": "Tidak. \\(r\\) berorde 4, \\(r^2\\) berorde 2, \\(e\\) berorde 1; semua refleksi berorde 2. Kesimpulan tentang refleksi tidak mencakup semua elemen.",
         "rubric": "Memberikan saksi yang membantah klaim universal."
       }
     ],
@@ -982,7 +982,7 @@ window.GROUP_LESSONS=[
       "q": "Dalam \\(D_{5}\\), hitung \\((sr)(sr^3)\\), tentukan orde hasilnya, dan banyak elemen \\(D_{5}\\).",
       "answer": "Produk ialah \\(r^{3-1}=r^2\\), berorde 5 karena \\(\\gcd(5,2)=1\\). \\(D_{5}\\) mempunyai 10 elemen.",
       "rubric": [
-        "Pakai bentuk sr^i secara konsisten.",
+        "Pakai bentuk \\(sr^i\\) secara konsisten.",
         "Bedakan orde hasil dengan orde grup."
       ]
     }
@@ -1064,7 +1064,7 @@ window.GROUP_LESSONS=[
         "Misalkan \\(H\\le G\\). Setiap \\(g\\in G\\) berada di \\(gH\\), sebab \\(e\\in H\\) dan \\(g=ge\\). Jadi gabungan koset kiri mencakup seluruh \\(G\\).",
         "Jika \\(aH\\) dan \\(bH\\) beririsan, pilih \\(x=ah_1=bh_2\\), dengan \\(h_1,h_2\\in H\\). Maka \\(a=bh_2h_1^{-1}\\).",
         "Untuk sembarang \\(ah\\in aH\\), kita mempunyai \\(ah=b(h_2h_1^{-1}h)\\in bH\\), karena \\(H\\) tertutup terhadap invers dan hasil kali. Jadi \\(aH\\subseteq bH\\).",
-        "Menukar peran a dan b memberi inklusi sebaliknya. Maka dua koset kiri yang beririsan pasti sama; jika tidak sama, keduanya terpisah.",
+        "Menukar peran \\(a\\) dan \\(b\\) memberi inklusi sebaliknya. Maka dua koset kiri yang beririsan pasti sama; jika tidak sama, keduanya terpisah.",
         "Peta \\(f:H\\to aH\\), \\(f(h)=ah\\), bijektif: jika \\(ah=ak\\), pembatalan memberi \\(h=k\\); dan setiap anggota \\(aH\\) memang berbentuk \\(ah\\). Jadi semua koset berukuran sama dengan \\(H\\).",
         "Untuk grup hingga, partisi ini memberi \\(|G|=[G:H]|H|\\). Pembuktian partisi dan bijeksi tidak memerlukan grup hingga; rumus hitungan bilangan bulat digunakan ketika grupnya hingga."
       ]
@@ -1084,24 +1084,24 @@ window.GROUP_LESSONS=[
       },
       {
         "q": "Pada contoh \\(S_3\\) di atas, hitung \\((12)H\\) dan bandingkan dengan \\(H\\).",
-        "hint": "Kalikan \\((12)\\) dengan setiap anggota H.",
+        "hint": "Kalikan \\((12)\\) dengan setiap anggota \\(H\\).",
         "answer": "\\((12)H=\\{(12),e\\}=H\\). Wakil koset boleh berbeda tanpa menghasilkan koset baru.",
         "rubric": "Menganggap koset sebagai himpunan, bukan wakil tunggal."
       },
       {
-        "q": "Buktikan bahwa koset kiri \\(aH\\) memuat e tepat ketika \\(a\\in H\\).",
-        "hint": "Dari \\(e=ah\\), selesaikan untuk a.",
-        "answer": "Jika \\(e=ah\\), maka \\(a=h^{-1}\\in H\\). Jika \\(a\\in H\\), maka \\(a^{-1}\\in H\\) dan \\(e=aa^{-1}\\in aH\\). Akibatnya satu-satunya koset kiri yang dapat menjadi subgrup ialah H sendiri.",
-        "rubric": "Dua arah dan penggunaan invers di H jelas."
+        "q": "Buktikan bahwa koset kiri \\(aH\\) memuat \\(e\\) tepat ketika \\(a\\in H\\).",
+        "hint": "Dari \\(e=ah\\), selesaikan untuk \\(a\\).",
+        "answer": "Jika \\(e=ah\\), maka \\(a=h^{-1}\\in H\\). Jika \\(a\\in H\\), maka \\(a^{-1}\\in H\\) dan \\(e=aa^{-1}\\in aH\\). Akibatnya satu-satunya koset kiri yang dapat menjadi subgrup ialah \\(H\\) sendiri.",
+        "rubric": "Dua arah dan penggunaan invers di \\(H\\) jelas."
       },
       {
         "q": "Buktikan bahwa \\(2\\mathbb Z\\) mempunyai dua koset di \\(\\mathbb Z\\), meskipun kedua himpunannya tak hingga.",
         "hint": "Pisahkan bilangan genap dan ganjil.",
-        "answer": "Setiap bilangan berbentuk 2k atau 2k+1. Kosetnya \\(2\\mathbb Z\\) dan \\(1+2\\mathbb Z\\), yang terpisah dan mencakup semua bilangan bulat. Indeksnya 2; tidak diperoleh dengan membagi dua simbol tak hingga.",
+        "answer": "Setiap bilangan berbentuk 2\\(k\\) atau \\(2k+1\\). Kosetnya \\(2\\mathbb Z\\) dan \\(1+2\\mathbb Z\\), yang terpisah dan mencakup semua bilangan bulat. Indeksnya 2; tidak diperoleh dengan membagi dua simbol tak hingga.",
         "rubric": "Kelengkapan dan keterpisahan kelas dijelaskan."
       }
     ],
-    "reflection": "Jelaskan mengapa kesamaan banyak anggota aH dan Ha tidak membuktikan kesamaan kedua himpunan. Gunakan saksi dari \\(S_{3}\\).",
+    "reflection": "Jelaskan mengapa kesamaan banyak anggota \\(aH\\) dan \\(Ha\\) tidak membuktikan kesamaan kedua himpunan. Gunakan saksi dari \\(S_{3}\\).",
     "pdfPage": 197,
     "pdfPrinted": 177,
     "goalRefs": [
@@ -1118,8 +1118,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Di \\(\\mathbb Z_{16}\\), ambil H=\\(\\langle[4]\\rangle\\). Hitung indeksnya, bandingkan 1+H dengan 5+H, dan jelaskan mengapa daftar koset saja belum merupakan definisi operasi grup kuosien.",
-      "answer": "H={0,4,8,12}; indeks 4. Kedua koset sama dengan {1,5,9,13}. Untuk menyebut grup kuosien, operasi koset harus ditetapkan dan sah; syarat normalitas dibahas lengkap pada Bab 10.",
+      "q": "Di \\(\\mathbb Z_{16}\\), ambil \\(H=\\langle[4]\\rangle\\). Hitung indeksnya, bandingkan \\(1+H\\) dengan \\(5+H\\), dan jelaskan mengapa daftar koset saja belum merupakan definisi operasi grup kuosien.",
+      "answer": "\\(H=\\{0,4,8,12\\}\\); indeks 4. Kedua koset sama dengan \\(\\{1,5,9,13\\}\\). Untuk menyebut grup kuosien, operasi koset harus ditetapkan dan sah; syarat normalitas dibahas lengkap pada Bab 10.",
       "rubric": [
         "Bandingkan himpunan, bukan wakilnya.",
         "Pisahkan himpunan koset dari struktur grup."
@@ -1174,42 +1174,42 @@ window.GROUP_LESSONS=[
       ]
     },
     "prerequisites": [
-      "Memahami partisi oleh koset dan bijeksi H ke aH.",
+      "Memahami partisi oleh koset dan bijeksi \\(H\\) ke \\(aH\\).",
       "Memahami orde elemen dan subgrup siklik."
     ],
     "worked": [
       {
         "title": "Membatasi kemungkinan orde",
         "steps": [
-          "Jika G berorde 18 dan H subgrup, \\(|H|\\) harus membagi 18. Calonnya \\(1,2,3,6,9,18\\).",
-          "Untuk elemen a, subgrup yang dibangkitkannya mempunyai ukuran sama dengan orde a. Jadi daftar yang sama membatasi orde elemen.",
+          "Jika \\(G\\) berorde 18 dan \\(H\\) subgrup, \\(|H|\\) harus membagi 18. Calonnya \\(1,2,3,6,9,18\\).",
+          "Untuk elemen \\(a\\), subgrup yang dibangkitkannya mempunyai ukuran sama dengan orde \\(a\\). Jadi daftar yang sama membatasi orde elemen.",
           "Daftar ini belum menyatakan setiap calon pasti muncul sebagai orde elemen. Bahkan pada grup siklik, adanya semua calon memakai informasi tambahan tentang generator, bukan Lagrange saja."
         ]
       },
       {
         "title": "Grup berorde prima dan kegagalan kebalikan",
         "steps": [
-          "Jika \\(|G|=7\\) dan \\(a\\ne e\\), orde a membagi 7 dan bukan 1, sehingga orde a adalah 7. Maka a membangkitkan G.",
-          "Sekarang perhatikan U(8), grup unit modulo 8 berorde 4. Semua elemen nonidentitasnya berorde 2.",
-          "Bilangan 4 membagi orde grup, tetapi tidak ada elemen berorde 4. Ini membantah kebalikan yang menyatakan setiap pembagi pasti menjadi orde suatu elemen. Ia bukan contoh bantahan untuk keberadaan subgrup berorde 4, karena seluruh U(8) adalah subgrup dirinya sendiri."
+          "Jika \\(|G|=7\\) dan \\(a\\ne e\\), orde \\(a\\) membagi 7 dan bukan 1, sehingga orde \\(a\\) adalah 7. Maka \\(a\\) membangkitkan \\(G\\).",
+          "Sekarang perhatikan \\(U(8)\\), grup unit modulo 8 berorde 4. Semua elemen nonidentitasnya berorde 2.",
+          "Bilangan 4 membagi orde grup, tetapi tidak ada elemen berorde 4. Ini membantah kebalikan yang menyatakan setiap pembagi pasti menjadi orde suatu elemen. Ia bukan contoh bantahan untuk keberadaan subgrup berorde 4, karena seluruh \\(U(8)\\) adalah subgrup dirinya sendiri."
         ]
       }
     ],
     "proof": {
       "title": "Bukti terpandu: Teorema Lagrange dan akibatnya",
       "steps": [
-        "Asumsi: G grup hingga dan H subgrup. Koset-koset kiri H mempartisi G, jadi setiap anggota G dihitung tepat sekali.",
-        "Peta \\(h\\mapsto ah\\) bijektif dari H ke aH. Karena itu setiap koset berisi \\(|H|\\) elemen.",
-        "Jika ada m koset, maka \\(|G|=m|H|\\). Dengan \\(m=[G:H]\\), diperoleh \\(|H|\\mid|G|\\). Hipotesis hingga memungkinkan persamaan hitungan bilangan bulat ini.",
+        "Asumsi: \\(G\\) grup hingga dan \\(H\\) subgrup. Koset-koset kiri \\(H\\) mempartisi \\(G\\), jadi setiap anggota \\(G\\) dihitung tepat sekali.",
+        "Peta \\(h\\mapsto ah\\) bijektif dari \\(H\\) ke \\(aH\\). Karena itu setiap koset berisi \\(|H|\\) elemen.",
+        "Jika ada \\(m\\) koset, maka \\(|G|=m|H|\\). Dengan \\(m=[G:H]\\), diperoleh \\(|H|\\mid|G|\\). Hipotesis hingga memungkinkan persamaan hitungan bilangan bulat ini.",
         "Ambil \\(H=\\langle a\\rangle\\). Maka \\(\\operatorname{ord}(a)\\mid|G|\\). Jika \\(|G|=q\\operatorname{ord}(a)\\), maka \\(a^{|G|}=(a^{\\operatorname{ord}(a)})^q=e\\).",
-        "Jika orde grup p prima, setiap elemen nonidentitas memiliki orde p, sehingga grup siklik. Arah penalarannya dari subgrup atau elemen yang ada menuju pembagi; jangan membaliknya tanpa teorema lain."
+        "Jika orde grup \\(p\\) prima, setiap elemen nonidentitas memiliki orde \\(p\\), sehingga grup siklik. Arah penalarannya dari subgrup atau elemen yang ada menuju pembagi; jangan membaliknya tanpa teorema lain."
       ]
     },
     "exercises": [
       {
-        "q": "Misalkan G grup hingga berorde 24 dan H subgrup berorde 6. Berapa indeks H, berapa anggota setiap kosetnya, dan apa kemungkinan orde elemen yang berada dalam H?",
-        "hint": "Gunakan partisi koset untuk indeks; terapkan Lagrange pada grup H untuk orde elemennya.",
-        "answer": "Indeksnya \\(24/6=4\\). Setiap koset berisi 6 elemen. Untuk \\(a\\in H\\), orde a membagi 6, jadi calonnya \\(1,2,3,6\\); ini bukan jaminan bahwa semua calon muncul.",
+        "q": "Misalkan \\(G\\) grup hingga berorde 24 dan \\(H\\) subgrup berorde 6. Berapa indeks \\(H\\), berapa anggota setiap kosetnya, dan apa kemungkinan orde elemen yang berada dalam \\(H\\)?",
+        "hint": "Gunakan partisi koset untuk indeks; terapkan Lagrange pada grup \\(H\\) untuk orde elemennya.",
+        "answer": "Indeksnya \\(24/6=4\\). Setiap koset berisi 6 elemen. Untuk \\(a\\in H\\), orde \\(a\\) membagi 6, jadi calonnya \\(1,2,3,6\\); ini bukan jaminan bahwa semua calon muncul.",
         "rubric": "Membedakan banyak koset, ukuran koset, dan orde elemen; tidak memerlukan normalitas."
       },
       {
@@ -1221,19 +1221,19 @@ window.GROUP_LESSONS=[
       {
         "q": "Buktikan grup berorde 11 siklik.",
         "hint": "Pilih satu elemen selain identitas.",
-        "answer": "Ada a≠e karena grup mempunyai 11 elemen. Ordenya membagi 11 dan bukan 1, jadi 11. Maka subgrup yang dibangkitkan a memiliki seluruh 11 elemen dan sama dengan G.",
+        "answer": "Ada \\(a\\ne e\\) karena grup mempunyai 11 elemen. Ordenya membagi 11 dan bukan 1, jadi 11. Maka subgrup yang dibangkitkan \\(a\\) memiliki seluruh 11 elemen dan sama dengan \\(G\\).",
         "rubric": "Menjelaskan mengapa ordenya bukan 1."
       },
       {
-        "q": "Apakah \\(a^{12}=e\\) menjamin orde a adalah 12?",
+        "q": "Apakah \\(a^{12}=e\\) menjamin orde \\(a\\) adalah 12?",
         "hint": "Orde terkecil dapat lebih kecil.",
-        "answer": "Tidak. Identitas sendiri memenuhi persamaan itu dengan orde 1; elemen berorde 2,3,4,6 juga dapat memenuhinya. Yang dapat disimpulkan ialah orde a membagi 12.",
+        "answer": "Tidak. Identitas sendiri memenuhi persamaan itu dengan orde 1; elemen berorde 2,3,4,6 juga dapat memenuhinya. Yang dapat disimpulkan ialah orde \\(a\\) membagi 12.",
         "rubric": "Bedakan suatu eksponen yang bekerja dengan eksponen positif terkecil."
       },
       {
-        "q": "Buktikan jika a berorde m dan \\(a^k=e\\), maka m membagi k untuk k positif.",
+        "q": "Buktikan jika \\(a\\) berorde \\(m\\) dan \\(a^k=e\\), maka \\(m\\) membagi \\(k\\) untuk \\(k\\) positif.",
         "hint": "Gunakan pembagian \\(k=qm+r\\), \\(0\\le r<m\\).",
-        "answer": "\\(e=a^k=(a^m)^qa^r=a^r\\). Jika r positif, ini bertentangan dengan minimalitas m. Jadi r=0 dan m membagi k.",
+        "answer": "\\(e=a^k=(a^m)^qa^r=a^r\\). Jika \\(r\\) positif, ini bertentangan dengan minimalitas \\(m\\). Jadi \\(r=0\\) dan \\(m\\) membagi \\(k\\).",
         "rubric": "Menggunakan minimalitas orde, bukan mengasumsikan kesimpulan."
       }
     ],
@@ -1254,8 +1254,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "G grup berorde 28 dan H subgrup berorde 7. Tentukan indeks H serta kemungkinan orde elemen nonidentitas di H. Apakah ini sendiri membuktikan G siklik?",
-      "answer": "Indeksnya 4. Setiap elemen nonidentitas H berorde 7 karena ordenya membagi 7 dan bukan 1. Belum membuktikan G siklik: tidak diperoleh elemen berorde 28.",
+      "q": "\\(G\\) grup berorde 28 dan \\(H\\) subgrup berorde 7. Tentukan indeks \\(H\\) serta kemungkinan orde elemen nonidentitas di \\(H\\). Apakah ini sendiri membuktikan \\(G\\) siklik?",
+      "answer": "Indeksnya 4. Setiap elemen nonidentitas \\(H\\) berorde 7 karena ordenya membagi 7 dan bukan 1. Belum membuktikan \\(G\\) siklik: tidak diperoleh elemen berorde 28.",
       "rubric": [
         "Terapkan Lagrange pada grup yang tepat.",
         "Jangan menyimpulkan lebih dari yang dibuktikan."
@@ -1317,9 +1317,9 @@ window.GROUP_LESSONS=[
       {
         "title": "Menghitung kernel dan citra dari definisi",
         "steps": [
-          "Tetapkan \\(\\varphi:\\mathbb Z_{12}\\to\\mathbb Z_6\\), \\(\\varphi([x]_{12})=[2x]_6\\). Jika wakil berubah menjadi \\(x+12t\\), hasil berubah sebesar 24t, kelipatan 6. Jadi aturan sah.",
-          "Untuk setiap x,y, \\(\\varphi([x]+[y])=[2(x+y)]_6=[2x]_6+[2y]_6\\). Maka aturan adalah homomorfisme.",
-          "Kernel menyelesaikan \\(2x\\equiv0\\pmod6\\), yaitu x kelipatan 3. Di domain didapat \\(\\ker\\varphi=\\{[0],[3],[6],[9]\\}\\).",
+          "Tetapkan \\(\\varphi:\\mathbb Z_{12}\\to\\mathbb Z_6\\), \\(\\varphi([x]_{12})=[2x]_6\\). Jika wakil berubah menjadi \\(x+12t\\), hasil berubah sebesar 24\\(t\\), kelipatan 6. Jadi aturan sah.",
+          "Untuk setiap \\(x,y\\), \\(\\varphi([x]+[y])=[2(x+y)]_6=[2x]_6+[2y]_6\\). Maka aturan adalah homomorfisme.",
+          "Kernel menyelesaikan \\(2x\\equiv0\\pmod6\\), yaitu \\(x\\) kelipatan 3. Di domain didapat \\(\\ker\\varphi=\\{[0],[3],[6],[9]\\}\\).",
           "Hasil yang tercapai hanya \\([0],[2],[4]\\), semuanya tercapai. Jadi citra berukuran 3, kernel berukuran 4, peta tidak injektif dan tidak surjektif ke seluruh kodomain."
         ]
       },
@@ -1327,8 +1327,8 @@ window.GROUP_LESSONS=[
         "title": "Contoh di luar kelas residu: determinan",
         "steps": [
           "Ambil \\(GL_2(\\mathbb R)\\), grup matriks real invertibel, dan grup perkalian \\(\\mathbb R^{\\times}\\) bilangan real tak nol. Peta determinan memenuhi \\(\\det(AB)=\\det(A)\\det(B)\\), sehingga homomorfisme. Identitas domain adalah matriks \\(I\\); identitas kodomain adalah bilangan \\(1\\).",
-          "Kernel adalah matriks invertibel dengan determinan 1, bukan matriks dengan determinan 0. Sebagai contoh \\(\\begin{pmatrix}1&t\\\\0&1\\end{pmatrix}\\) berada dalam kernel untuk semua real t.",
-          "Peta surjektif: untuk setiap real \\(r\\ne0\\), matriks diagonal \\(\\begin{pmatrix}r&0\\\\0&1\\end{pmatrix}\\) mempunyai determinan r. Tidak injektif karena kernel memuat banyak matriks selain I.",
+          "Kernel adalah matriks invertibel dengan determinan 1, bukan matriks dengan determinan 0. Sebagai contoh \\(\\begin{pmatrix}1&t\\\\0&1\\end{pmatrix}\\) berada dalam kernel untuk semua real \\(t\\).",
+          "Peta surjektif: untuk setiap real \\(r\\ne0\\), matriks diagonal \\(\\begin{pmatrix}r&0\\\\0&1\\end{pmatrix}\\) mempunyai determinan \\(r\\). Tidak injektif karena kernel memuat banyak matriks selain \\(I\\).",
           "Contoh ini memakai sifat determinan dari aljabar linear. Bila belum mempelajarinya, fokus dahulu pada contoh kelas residu; sifat hasil kali determinan adalah prasyarat, bukan sesuatu yang dibuktikan di sini."
         ]
       }
@@ -1336,10 +1336,10 @@ window.GROUP_LESSONS=[
     "proof": {
       "title": "Bukti terpandu: identitas, invers, dan kernel trivial",
       "steps": [
-        "Asumsi: \\(\\varphi:G\\to H\\) homomorfisme. Dari \\(\\varphi(e_G)=\\varphi(e_Ge_G)=\\varphi(e_G)\\varphi(e_G)\\), pembatalan di H memberi \\(\\varphi(e_G)=e_H\\).",
+        "Asumsi: \\(\\varphi:G\\to H\\) homomorfisme. Dari \\(\\varphi(e_G)=\\varphi(e_Ge_G)=\\varphi(e_G)\\varphi(e_G)\\), pembatalan di \\(H\\) memberi \\(\\varphi(e_G)=e_H\\).",
         "Selanjutnya \\(\\varphi(a)\\varphi(a^{-1})=\\varphi(aa^{-1})=e_H\\), dan urutan sebaliknya juga menghasilkan \\(e_H\\). Keunikan invers memberi \\(\\varphi(a^{-1})=\\varphi(a)^{-1}\\).",
-        "Kernel tak kosong karena memuat \\(e_G\\). Untuk a,b dalam kernel, \\(\\varphi(ab^{-1})=\\varphi(a)\\varphi(b)^{-1}=e_H\\), sehingga \\(ab^{-1}\\) tetap dalam kernel. Maka kernel subgrup G.",
-        "Jika \\(\\varphi\\) injektif dan a dalam kernel, maka \\(\\varphi(a)=e_H=\\varphi(e_G)\\), sehingga \\(a=e_G\\). Jadi kernel trivial.",
+        "Kernel tak kosong karena memuat \\(e_G\\). Untuk \\(a,b\\) dalam kernel, \\(\\varphi(ab^{-1})=\\varphi(a)\\varphi(b)^{-1}=e_H\\), sehingga \\(ab^{-1}\\) tetap dalam kernel. Maka kernel subgrup \\(G\\).",
+        "Jika \\(\\varphi\\) injektif dan \\(a\\) dalam kernel, maka \\(\\varphi(a)=e_H=\\varphi(e_G)\\), sehingga \\(a=e_G\\). Jadi kernel trivial.",
         "Sebaliknya, andaikan \\(\\ker\\varphi=\\{e_G\\}\\) dan \\(\\varphi(a)=\\varphi(b)\\). Maka \\(\\varphi(ab^{-1})=e_H\\), sehingga \\(ab^{-1}=e_G\\) dan \\(a=b\\). Jadi peta injektif.",
         "Tidak ada langkah yang menyatakan citra sama dengan kodomain. Injektivitas dan surjektivitas adalah dua pemeriksaan berbeda."
       ]
@@ -1347,7 +1347,7 @@ window.GROUP_LESSONS=[
     "exercises": [
       {
         "q": "Apakah \\(f:\\mathbb Z\\to\\mathbb Z\\), \\(f(n)=n+1\\), homomorfisme aditif?",
-        "hint": "Bandingkan hasil pada identitas atau hitung f(a+b).",
+        "hint": "Bandingkan hasil pada identitas atau hitung \\(f(a+b)\\).",
         "answer": "Bukan: \\(f(0)=1\\ne0\\). Juga \\(f(a+b)=a+b+1\\), sedangkan \\(f(a)+f(b)=a+b+2\\). Bijektivitas saja tidak menjamin pelestarian operasi.",
         "rubric": "Ada persamaan homomorfisme yang gagal."
       },
@@ -1360,7 +1360,7 @@ window.GROUP_LESSONS=[
       {
         "q": "Apakah \\([x]_8\\mapsto[3x]_6\\) sah?",
         "hint": "Bandingkan wakil 0 dan 8 dari kelas yang sama.",
-        "answer": "Ya: \\(6\\mid3\\cdot8\\). Pergantian x menjadi x+8t mengubah hasil sebesar 24t, kelipatan 6. Kernel \\(\\{[0],[2],[4],[6]\\}\\), citra \\(\\{[0],[3]\\}\\).",
+        "answer": "Ya: \\(6\\mid3\\cdot8\\). Pergantian \\(x\\) menjadi \\(x+8t\\) mengubah hasil sebesar 24\\(t\\), kelipatan 6. Kernel \\(\\{[0],[2],[4],[6]\\}\\), citra \\(\\{[0],[3]\\}\\).",
         "rubric": "Buktikan keterdefinisian untuk semua pergantian wakil, bukan satu pasangan saja."
       },
       {
@@ -1394,7 +1394,7 @@ window.GROUP_LESSONS=[
     ],
     "assessment": {
       "q": "Periksa \\([x]_{10}\\mapsto[3x]_{15}\\). Tentukan keterdefinisian, kernel, citra, injektivitas dan surjektivitas.",
-      "answer": "Sah karena 15 membagi 30; pelestarian penjumlahan mengikuti distribusi. Kernel {[0],[5]}, citra {[0],[3],[6],[9],[12]}; tidak injektif dan tidak surjektif ke \\(\\mathbb Z_{15}\\).",
+      "answer": "Sah karena 15 membagi 30; pelestarian penjumlahan mengikuti distribusi. Kernel \\(\\{[0],[5]\\}\\), citra \\(\\{[0],[3],[6],[9],[12]\\}\\); tidak injektif dan tidak surjektif ke \\(\\mathbb Z_{15}\\).",
       "rubric": [
         "Periksa aturan pada kelas sebelum menghitung kernel.",
         "Sebutkan kodomain saat menilai surjektivitas."
@@ -1432,7 +1432,7 @@ window.GROUP_LESSONS=[
     "example": "Di \\(\\mathbb{Z}_{12}, N = \\langle 4\\rangle\\) normal karena grupnya abelian. Kuosien mempunyai empat elemen berupa koset \\(N, 1+N, 2+N\\), dan \\(3+N\\). Penjumlahan koset mengikuti penjumlahan wakil modulo empat.",
     "pitfall": "Koset \\(\\{1,5,9\\}\\) dalam contoh bukan subgrup \\(\\mathbb{Z}_{12}\\), tetapi menjadi satu elemen yang sah pada grup kuosien.",
     "lab": "coset",
-    "prompt": "Bandingkan \\(H=\\{e,(12)\\}\\) dan \\(A_3=\\{e,(123),(132)\\}\\) di \\(S_{3}\\). Prediksi subgrup mana yang koset kiri dan kanannya selalu sama. Untuk H, coba kalikan koset H dengan (13)H memakai dua wakil berbeda dari H.",
+    "prompt": "Bandingkan \\(H=\\{e,(12)\\}\\) dan \\(A_3=\\{e,(123),(132)\\}\\) di \\(S_{3}\\). Prediksi subgrup mana yang koset kiri dan kanannya selalu sama. Untuk \\(H\\), coba kalikan koset \\(H\\) dengan \\((13)H\\) memakai dua wakil berbeda dari \\(H\\).",
     "quiz": {
       "q": "Identitas grup kuosien \\(G/N\\) adalah…",
       "choices": [
@@ -1444,7 +1444,7 @@ window.GROUP_LESSONS=[
       "why": "\\(N\\) adalah koset identitas dan memenuhi \\(N(aN) = aN = (aN)N\\).",
       "feedback": [
         "\\(N\\) adalah koset identitas dan memenuhi \\(N(aN) = aN = (aN)N\\).",
-        "Elemen kuosien adalah koset; elemen a dari G bukan identitas kuosien.",
+        "Elemen kuosien adalah koset; elemen \\(a\\) dari \\(G\\) bukan identitas kuosien.",
         "Identitas merupakan satu koset, bukan jumlah wakil."
       ]
     },
@@ -1457,18 +1457,18 @@ window.GROUP_LESSONS=[
         "title": "Mengapa operasi pada koset dapat gagal?",
         "steps": [
           "Ambil \\(H=\\{e,h\\}\\), dengan \\(h=(12)\\), dan \\(a=(13)\\). Kita mencoba aturan \\((xH)(yH)=(xy)H\\).",
-          "Pada koset pertama H, wakil e dan h menyatakan koset yang sama. Dengan wakil e, hasil \\(H\\cdot aH\\) adalah \\(aH=\\{(13),(123)\\}\\).",
-          "Dengan wakil h, hasilnya \\((ha)H\\). Karena \\(ha=(132)\\), koset ini adalah \\(\\{(132),(23)\\}\\), berbeda dari aH.",
+          "Pada koset pertama \\(H\\), wakil \\(e\\) dan \\(h\\) menyatakan koset yang sama. Dengan wakil \\(e\\), hasil \\(H\\cdot aH\\) adalah \\(aH=\\{(13),(123)\\}\\).",
+          "Dengan wakil \\(h\\), hasilnya \\((ha)H\\). Karena \\(ha=(132)\\), koset ini adalah \\(\\{(132),(23)\\}\\), berbeda dari \\(aH\\).",
           "Jadi perkalian percobaan bergantung pada wakil. Kegagalannya terjadi sebelum pemeriksaan empat aksioma: aturan itu belum mendefinisikan operasi pada himpunan koset."
         ]
       },
       {
         "title": "Kuosien sah dengan dua elemen",
         "steps": [
-          "Ambil \\(N=A_3=\\{e,(123),(132)\\}\\). Ini subgrup: ditutup oleh komposisi dan invers, dengan identitas e. Koset lainnya \\(tN=\\{(12),(13),(23)\\}\\), dengan \\(t=(12)\\).",
-          "Ada tepat dua koset kiri dan dua koset kanan: N sendiri dan komplemennya. Karena itu koset kiri dan kanan sama untuk setiap wakil; N normal.",
+          "Ambil \\(N=A_3=\\{e,(123),(132)\\}\\). Ini subgrup: ditutup oleh komposisi dan invers, dengan identitas \\(e\\). Koset lainnya \\(tN=\\{(12),(13),(23)\\}\\), dengan \\(t=(12)\\).",
+          "Ada tepat dua koset kiri dan dua koset kanan: \\(N\\) sendiri dan komplemennya. Karena itu koset kiri dan kanan sama untuk setiap wakil; \\(N\\) normal.",
           "Pada kuosien, \\(N\\cdot N=N\\), \\(N\\cdot tN=tN\\cdot N=tN\\), dan \\((tN)(tN)=t^2N=N\\). Ini tabel grup berorde 2.",
-          "Identitas kuosien adalah himpunan N, bukan permutasi e saja. Setiap elemen kuosien di sini merupakan koset berisi tiga permutasi."
+          "Identitas kuosien adalah himpunan \\(N\\), bukan permutasi \\(e\\) saja. Setiap elemen kuosien di sini merupakan koset berisi tiga permutasi."
         ]
       }
     ],
@@ -1476,9 +1476,9 @@ window.GROUP_LESSONS=[
       "title": "Bukti terpandu: normalitas dan operasi koset",
       "steps": [
         "Andaikan \\(N\\trianglelefteq G\\). Ambil \\(aN=a'N\\) dan \\(bN=b'N\\). Ada \\(n_1,n_2\\in N\\) sehingga \\(a'=an_1\\), \\(b'=bn_2\\).",
-        "Maka \\(a'b'=an_1bn_2=ab(b^{-1}n_1b)n_2\\). Normalitas memberi \\(b^{-1}n_1b\\in N\\), sehingga faktor sesudah ab berada di N. Jadi \\(a'b'N=abN\\): hasil tidak bergantung pada wakil.",
-        "Sebaliknya, jika aturan \\((aN)(bN)=abN\\) tidak bergantung pada wakil, maka untuk \\(n\\in N\\), wakil e dan n dari N harus memberi \\(gN=ngN\\). Kriteria koset memberi \\(g^{-1}ng\\in N\\). Berlaku untuk semua g dan n, sehingga \\(g^{-1}Ng\\subseteq N\\); mengganti \\(g\\) dengan \\(g^{-1}\\) memberi \\(gNg^{-1}\\subseteq N\\). Konjugasi inklusi terakhir oleh \\(g^{-1}\\) memberi \\(N\\subseteq g^{-1}Ng\\). Kedua inklusi memberi \\(g^{-1}Ng=N\\). Jadi N normal.",
-        "Setelah operasi sah, himpunan koset tak kosong karena memuat N. Ketertutupan: \\((aN)(bN)=abN\\in G/N\\). Asosiativitas mengikuti \\((ab)c=a(bc)\\) di G.",
+        "Maka \\(a'b'=an_1bn_2=ab(b^{-1}n_1b)n_2\\). Normalitas memberi \\(b^{-1}n_1b\\in N\\), sehingga faktor sesudah \\(ab\\) berada di \\(N\\). Jadi \\(a'b'N=abN\\): hasil tidak bergantung pada wakil.",
+        "Sebaliknya, jika aturan \\((aN)(bN)=abN\\) tidak bergantung pada wakil, maka untuk \\(n\\in N\\), wakil \\(e\\) dan \\(n\\) dari \\(N\\) harus memberi \\(gN=ngN\\). Kriteria koset memberi \\(g^{-1}ng\\in N\\). Berlaku untuk semua \\(g\\) dan \\(n\\), sehingga \\(g^{-1}Ng\\subseteq N\\); mengganti \\(g\\) dengan \\(g^{-1}\\) memberi \\(gNg^{-1}\\subseteq N\\). Konjugasi inklusi terakhir oleh \\(g^{-1}\\) memberi \\(N\\subseteq g^{-1}Ng\\). Kedua inklusi memberi \\(g^{-1}Ng=N\\). Jadi \\(N\\) normal.",
+        "Setelah operasi sah, himpunan koset tak kosong karena memuat \\(N\\). Ketertutupan: \\((aN)(bN)=abN\\in G/N\\). Asosiativitas mengikuti \\((ab)c=a(bc)\\) di \\(G\\).",
         "Identitas: \\(N(aN)=(aN)N=aN\\). Invers: \\((aN)(a^{-1}N)=N=(a^{-1}N)(aN)\\). Keempat aksioma terpenuhi.",
         "Normalitas bukan syarat tambahan yang dapat diabaikan setelah menghitung ukuran. Ia memastikan bahwa aturan operasi standar pada koset benar-benar sah."
       ]
@@ -1486,15 +1486,15 @@ window.GROUP_LESSONS=[
     "exercises": [
       {
         "q": "Mengapa setiap subgrup grup abelian normal?",
-        "hint": "Bandingkan ah dan ha untuk anggota h dalam subgrup.",
-        "answer": "Untuk setiap a dan h, \\(ah=ha\\). Karena itu himpunan \\(aH=\\{ah:h\\in H\\}\\) sama dengan \\(Ha\\) untuk setiap a.",
-        "rubric": "Pernyataan berlaku untuk semua a, bukan satu wakil."
+        "hint": "Bandingkan \\(ah\\) dan \\(ha\\) untuk anggota \\(h\\) dalam subgrup.",
+        "answer": "Untuk setiap \\(a\\) dan \\(h\\), \\(ah=ha\\). Karena itu himpunan \\(aH=\\{ah:h\\in H\\}\\) sama dengan \\(Ha\\) untuk setiap \\(a\\).",
+        "rubric": "Pernyataan berlaku untuk semua \\(a\\), bukan satu wakil."
       },
       {
         "q": "Buat tabel kuosien \\(\\mathbb Z_{12}/\\langle4\\rangle\\).",
         "hint": "Gunakan wakil 0,1,2,3; jumlah wakil direduksi modulo 4 pada daftar koset.",
         "answer": "Dengan \\(C_i=i+H\\), aturan operasinya \\(C_i+C_j=C_{i+j\\bmod4}\\). Identitas \\(C_0\\); invers \\(C_1\\) adalah \\(C_3\\).",
-        "rubric": "Tabel memuat koset sebagai elemen, bukan anggota tunggal H.",
+        "rubric": "Tabel memuat koset sebagai elemen, bukan anggota tunggal \\(H\\).",
         "answerTable": {
           "caption": "Tabel penjumlahan koset pada latihan 10.2",
           "headers": [
@@ -1543,25 +1543,25 @@ window.GROUP_LESSONS=[
         "rubric": "Sertakan alasan kesamaan, tidak berhenti pada satu inklusi."
       },
       {
-        "q": "Dalam contoh H di \\(S_{3}\\), apakah kesamaan \\(eH=(12)H\\) menjamin e dan (12) sama sebagai permutasi?",
+        "q": "Dalam contoh \\(H\\) di \\(S_{3}\\), apakah kesamaan \\(eH=(12)H\\) menjamin \\(e\\) dan \\((12)\\) sama sebagai permutasi?",
         "hint": "Bedakan wakil dengan himpunan koset.",
-        "answer": "Tidak. e menetapkan semua titik, sedangkan (12) menukar dua titik. Keduanya berbeda, tetapi berada dalam koset H yang sama. Justru perbedaan wakil inilah yang dipakai menguji keterdefinisian operasi.",
+        "answer": "Tidak. \\(e\\) menetapkan semua titik, sedangkan \\((12)\\) menukar dua titik. Keduanya berbeda, tetapi berada dalam koset \\(H\\) yang sama. Justru perbedaan wakil inilah yang dipakai menguji keterdefinisian operasi.",
         "rubric": "Bedakan kesamaan elemen asal dan kesamaan koset."
       },
       {
-        "q": "Jika \\(|G|=30\\), N normal, dan \\(|N|=5\\), berapa elemen G/N? Apakah data itu membuktikan G/N siklik?",
+        "q": "Jika \\(|G|=30\\), \\(N\\) normal, dan \\(|N|=5\\), berapa elemen \\(G/N\\)? Apakah data itu membuktikan \\(G/N\\) siklik?",
         "hint": "Lagrange menghitung ukuran, bukan seluruh struktur operasi.",
         "answer": "Kuosien mempunyai \\(30/5=6\\) elemen. Data ini saja tidak membuktikan siklik: grup berorde 6 dapat siklik atau nonabelian seperti \\(S_{3}\\).",
         "rubric": "Tidak menyimpulkan struktur hanya dari ukuran."
       }
     ],
-    "reflection": "Jelaskan dengan dua wakil dari koset yang sama mengapa H={e,(12)} tidak menghasilkan grup kuosien \\(S_{3}\\)/H dengan operasi standar.",
+    "reflection": "Jelaskan dengan dua wakil dari koset yang sama mengapa \\(H=\\{e,(12)\\}\\) tidak menghasilkan grup kuosien \\(S_{3}/H\\) dengan operasi standar.",
     "pdfPage": 285,
     "pdfPrinted": 265,
     "challenges": [
       {
         "title": "Tantangan setelah mempelajari normalitas",
-        "q": "Jika \\(|G|=24\\) dan \\(|H|=6\\), apakah ukuran ini menjamin H normal?",
+        "q": "Jika \\(|G|=24\\) dan \\(|H|=6\\), apakah ukuran ini menjamin \\(H\\) normal?",
         "hint": "Di \\(S_4\\), periksa subgrup penetap titik 4 dan konjugasi oleh \\((14)\\).",
         "answer": "Tidak. Subgrup penetap titik 4 berorde 6, tetapi memuat \\((12)\\) sedangkan konjugasinya \\((14)(12)(14)=(24)\\) tidak menetapkan titik 4. Jadi subgrup ini tidak normal.",
         "rubric": "Contoh memakai ukuran yang tepat dan memperlihatkan satu konjugat yang keluar."
@@ -1580,8 +1580,8 @@ window.GROUP_LESSONS=[
       ]
     ],
     "assessment": {
-      "q": "Di \\(S_{3}\\), ambil H={e,(23)} dan a=(12). Bandingkan aH dengan Ha. Apakah operasi koset standar memberikan grup \\(S_{3}\\)/H?",
-      "answer": "\\(aH=\\{(12),(123)\\}\\), sedangkan \\(Ha=\\{(12),(132)\\}\\). Berbeda, jadi H tidak normal dan operasi koset standar tidak sah.",
+      "q": "Di \\(S_{3}\\), ambil \\(H=\\{e,(23)\\}\\) dan \\(a=(12)\\). Bandingkan \\(aH\\) dengan \\(Ha\\). Apakah operasi koset standar memberikan grup \\(S_{3}/H\\)?",
+      "answer": "\\(aH=\\{(12),(123)\\}\\), sedangkan \\(Ha=\\{(12),(132)\\}\\). Berbeda, jadi \\(H\\) tidak normal dan operasi koset standar tidak sah.",
       "rubric": [
         "Komposisi dari kanan ke kiri.",
         "Kesimpulan didasarkan pada perbedaan himpunan."
@@ -1644,16 +1644,16 @@ window.GROUP_LESSONS=[
         "title": "Membangun isomorfisme secara lengkap",
         "steps": [
           "Ambil \\((\\mathbb Z,+)\\) dan grup matriks \\(U=\\{A_k:k\\in\\mathbb Z\\}\\), dengan \\(A_k=\\begin{pmatrix}1&k\\\\0&1\\end{pmatrix}\\). Tetapkan \\(f(k)=A_k\\).",
-          "Perkalian memberi \\(A_kA_l=A_{k+l}\\). Maka U tertutup; asosiativitas diwarisi dari matriks; identitas \\(A_0\\) dan invers \\(A_k\\) adalah \\(A_{-k}\\). Jadi U grup.",
-          "Peta f sah dan mempertahankan operasi karena \\(f(k+l)=A_{k+l}=A_kA_l=f(k)f(l)\\).",
-          "Jika \\(f(k)=f(l)\\), entri kanan atas memberi k=l, sehingga injektif. Setiap anggota U memang \\(A_k\\) untuk suatu bilangan bulat k, sehingga surjektif. Jadi \\(\\mathbb Z\\cong U\\). Kesamaan struktur ditunjukkan oleh peta dan operasinya, bukan penampilan objek."
+          "Perkalian memberi \\(A_kA_l=A_{k+l}\\). Maka \\(U\\) tertutup; asosiativitas diwarisi dari matriks; identitas \\(A_0\\) dan invers \\(A_k\\) adalah \\(A_{-k}\\). Jadi \\(U\\) grup.",
+          "Peta \\(f\\) sah dan mempertahankan operasi karena \\(f(k+l)=A_{k+l}=A_kA_l=f(k)f(l)\\).",
+          "Jika \\(f(k)=f(l)\\), entri kanan atas memberi \\(k=l\\), sehingga injektif. Setiap anggota \\(U\\) memang \\(A_k\\) untuk suatu bilangan bulat \\(k\\), sehingga surjektif. Jadi \\(\\mathbb Z\\cong U\\). Kesamaan struktur ditunjukkan oleh peta dan operasinya, bukan penampilan objek."
         ]
       },
       {
         "title": "Menghubungkan tiga koset dengan tiga nilai citra",
         "steps": [
-          "Kembali ke \\(\\varphi:\\mathbb Z_{12}\\to\\mathbb Z_6\\), \\([x]\\mapsto[2x]\\). Kernel \\(K=\\{0,3,6,9\\}\\). Koset-kosetnya K, 1+K, 2+K.",
-          "Peta terinduksi memberi \\(K\\mapsto[0]_6\\), \\(1+K\\mapsto[2]_6\\), \\(2+K\\mapsto[4]_6\\). Misalnya wakil 1 dan 4 dari 1+K sama-sama menghasilkan kelas 2 modulo 6.",
+          "Kembali ke \\(\\varphi:\\mathbb Z_{12}\\to\\mathbb Z_6\\), \\([x]\\mapsto[2x]\\). Kernel \\(K=\\{0,3,6,9\\}\\). Koset-kosetnya \\(K\\), \\(1+K\\), \\(2+K\\).",
+          "Peta terinduksi memberi \\(K\\mapsto[0]_6\\), \\(1+K\\mapsto[2]_6\\), \\(2+K\\mapsto[4]_6\\). Misalnya wakil 1 dan 4 dari \\(1+K\\) sama-sama menghasilkan kelas 2 modulo 6.",
           "Periksa operasi: \\((1+K)+(1+K)=2+K\\), yang menuju kelas 4; hasil yang sama diperoleh dari \\([2]_6+[2]_6=[4]_6\\). Pembuktian umum tidak cukup dengan satu pasangan dan diberikan di bawah.",
           "Tiga koset berkorespondensi bijektif dengan citra \\(\\{[0],[2],[4]\\}\\). Target ini bukan seluruh \\(\\mathbb Z_{6}\\). Maka kuosien isomorfik dengan citra, bukan otomatis dengan kodomain."
         ]
@@ -1662,19 +1662,19 @@ window.GROUP_LESSONS=[
     "proof": {
       "title": "Bukti terpandu: Teorema Isomorfisme Pertama",
       "steps": [
-        "Misalkan \\(\\varphi:G\\to H\\) homomorfisme dan \\(K=\\ker\\varphi\\). Kernel normal, sehingga G/K merupakan grup. Tetapkan \\(\\overline\\varphi:G/K\\to\\operatorname{Im}\\varphi\\) dengan \\(\\overline\\varphi(gK)=\\varphi(g)\\).",
+        "Misalkan \\(\\varphi:G\\to H\\) homomorfisme dan \\(K=\\ker\\varphi\\). Kernel normal, sehingga \\(G/K\\) merupakan grup. Tetapkan \\(\\overline\\varphi:G/K\\to\\operatorname{Im}\\varphi\\) dengan \\(\\overline\\varphi(gK)=\\varphi(g)\\).",
         "Sah terhadap wakil: jika \\(gK=hK\\), maka \\(h^{-1}g\\in K\\). Jadi \\(\\varphi(h)^{-1}\\varphi(g)=e_H\\), sehingga \\(\\varphi(g)=\\varphi(h)\\). Maka satu koset tidak memperoleh dua nilai berbeda.",
         "Homomorfisme: definisi operasi kuosien memberi \\(\\overline\\varphi((gK)(hK))=\\varphi(gh)\\). Sifat homomorfisme awal memberi \\(\\varphi(gh)=\\varphi(g)\\varphi(h)\\). Definisi peta terinduksi memberi \\(\\varphi(g)\\varphi(h)=\\overline\\varphi(gK)\\overline\\varphi(hK)\\). Jadi operasi dipertahankan.",
         "Injektif: jika \\(\\overline\\varphi(gK)=\\overline\\varphi(hK)\\), maka \\(\\varphi(h^{-1}g)=e_H\\). Jadi \\(h^{-1}g\\in K\\), dan \\(gK=hK\\).",
-        "Surjektif ke citra: setiap \\(y\\in\\operatorname{Im}\\varphi\\) berbentuk \\(y=\\varphi(g)\\) untuk suatu g. Koset gK memetakan ke y. Tidak diperlukan asumsi bahwa setiap anggota kodomain H tercapai.",
+        "Surjektif ke citra: setiap \\(y\\in\\operatorname{Im}\\varphi\\) berbentuk \\(y=\\varphi(g)\\) untuk suatu \\(g\\). Koset \\(gK\\) memetakan ke \\(y\\). Tidak diperlukan asumsi bahwa setiap anggota kodomain \\(H\\) tercapai.",
         "Keempat pemeriksaan selesai. Karena peta terinduksi merupakan homomorfisme bijektif, \\(G/\\ker\\varphi\\cong\\operatorname{Im}\\varphi\\). Tidak diasumsikan grup hingga."
       ]
     },
     "exercises": [
       {
         "q": "Bangun isomorfisme dari \\((\\mathbb Z,+)\\) ke \\((2\\mathbb Z,+)\\).",
-        "hint": "Gunakan f(n)=2n dan perhatikan kodomainnya.",
-        "answer": "\\(f(n)=2n\\). Pelestarian operasi mengikuti \\(2(a+b)=2a+2b\\). Injektif karena 2a=2b memberi a=b; surjektif karena setiap anggota \\(2\\mathbb Z\\) berbentuk 2n. Invers fungsi memetakan 2n ke n.",
+        "hint": "Gunakan \\(f(n)=2n\\) dan perhatikan kodomainnya.",
+        "answer": "\\(f(n)=2n\\). Pelestarian operasi mengikuti \\(2(a+b)=2a+2b\\). Injektif karena \\(2a=2b\\) memberi \\(a=b\\); surjektif karena setiap anggota \\(2\\mathbb Z\\) berbentuk 2\\(n\\). Invers fungsi memetakan 2\\(n\\) ke \\(n\\).",
         "rubric": "Peta, pelestarian operasi, injektif, dan surjektif semuanya diperiksa."
       },
       {
@@ -1692,13 +1692,13 @@ window.GROUP_LESSONS=[
       {
         "q": "Buktikan bahwa isomorfisme mempertahankan orde elemen hingga.",
         "hint": "Gunakan \\(f(a^m)=f(a)^m\\) dan injektivitas untuk arah balik.",
-        "answer": "Jika orde a adalah m, maka \\(f(a)^m=e\\), sehingga orde f(a) membagi m. Jika \\(f(a)^k=e\\), maka \\(f(a^k)=f(e)\\), sehingga injektivitas memberi \\(a^k=e\\). Jadi bilangan positif terkecil pada kedua sisi sama.",
+        "answer": "Jika orde \\(a\\) adalah \\(m\\), maka \\(f(a)^m=e\\), sehingga orde \\(f(a)\\) membagi \\(m\\). Jika \\(f(a)^k=e\\), maka \\(f(a^k)=f(e)\\), sehingga injektivitas memberi \\(a^k=e\\). Jadi bilangan positif terkecil pada kedua sisi sama.",
         "rubric": "Dua arah diperlukan untuk kesamaan orde; satu arah saja belum cukup."
       },
       {
         "q": "Jika satu calon bijeksi antara dua grup gagal mempertahankan operasi, apakah kedua grup pasti tidak isomorfik?",
         "hint": "Bedakan kegagalan satu peta dan ketidakadaan semua peta yang mungkin.",
-        "answer": "Tidak. Misalnya \\(f:\\mathbb Z\\to\\mathbb Z\\), f(n)=n+1, bijektif tetapi bukan homomorfisme aditif. Kedua grup tetap isomorfik melalui identitas. Untuk membuktikan tidak isomorfik, diperlukan alasan yang menyingkirkan semua calon, misalnya perbedaan orde elemen.",
+        "answer": "Tidak. Misalnya \\(f:\\mathbb Z\\to\\mathbb Z\\), \\(f(n)=n+1\\), bijektif tetapi bukan homomorfisme aditif. Kedua grup tetap isomorfik melalui identitas. Untuk membuktikan tidak isomorfik, diperlukan alasan yang menyingkirkan semua calon, misalnya perbedaan orde elemen.",
         "rubric": "Kesimpulan tidak melampaui informasi tentang satu calon peta."
       }
     ],
@@ -1719,7 +1719,7 @@ window.GROUP_LESSONS=[
     ],
     "assessment": {
       "q": "Untuk \\([x]_{16}\\mapsto[2x]_8\\), tentukan kernel, citra, dan target tepat isomorfisme dari kuosien kernel.",
-      "answer": "Aturan sah karena 8 membagi 32. Kernel {[0],[4],[8],[12]}, citra {[0],[2],[4],[6]}. Kuosien mempunyai 4 elemen dan isomorfik ke citra, bukan ke seluruh \\(\\mathbb Z_{8}\\). Peta terinduksi x+K↦\\([2x]_{8}\\) perlu diperiksa sah, homomorfisme, injektif dan surjektif ke citra.",
+      "answer": "Aturan sah karena 8 membagi 32. Kernel \\(\\{[0],[4],[8],[12]\\}\\), citra \\(\\{[0],[2],[4],[6]\\}\\). Kuosien mempunyai 4 elemen dan isomorfik ke citra, bukan ke seluruh \\(\\mathbb Z_{8}\\). Peta terinduksi \\(x+K\\mapsto [2x]_{8}\\) perlu diperiksa sah, homomorfisme, injektif dan surjektif ke citra.",
       "rubric": [
         "Bedakan domain, kuosien, citra dan kodomain.",
         "Jelaskan empat pemeriksaan peta terinduksi."
@@ -1800,11 +1800,11 @@ window.GROUP_LESSONS=[
     "proof": {
       "title": "Bukti terpandu: orbit membentuk kelas ekuivalensi",
       "steps": [
-        "Jika suatu grup G bekerja pada objek X, tuliskan \\(g\\cdot x\\) untuk hasil transformasi. Syaratnya \\(e\\cdot x=x\\) dan \\((gh)\\cdot x=g\\cdot(h\\cdot x)\\). Untuk simetri geometri, kedua syarat mengikuti komposisi transformasi.",
-        "Definisikan x∼y jika \\(y=g\\cdot x\\) untuk suatu g. Relasi refleksif karena identitas membawa x ke dirinya sendiri.",
+        "Jika suatu grup \\(G\\) bekerja pada objek \\(X\\), tuliskan \\(g\\cdot x\\) untuk hasil transformasi. Syaratnya \\(e\\cdot x=x\\) dan \\((gh)\\cdot x=g\\cdot(h\\cdot x)\\). Untuk simetri geometri, kedua syarat mengikuti komposisi transformasi.",
+        "Definisikan \\(x\\sim y\\) jika \\(y=g\\cdot x\\) untuk suatu \\(g\\). Relasi refleksif karena identitas membawa \\(x\\) ke dirinya sendiri.",
         "Jika \\(y=g\\cdot x\\), maka \\(x=g^{-1}\\cdot y\\), sehingga relasi simetris. Keberadaan invers transformasi dipakai di sini.",
         "Jika \\(y=g\\cdot x\\) dan \\(z=h\\cdot y\\), maka \\(z=(hg)\\cdot x\\), sehingga relasi transitif. Urutan produk mengikuti transformasi yang bekerja dahulu.",
-        "Jadi kelas-kelas relasinya mempartisi X. Kelas dari x disebut orbitnya. Yang membentuk grup adalah transformasi; X tidak harus mempunyai operasi grup."
+        "Jadi kelas-kelas relasinya mempartisi \\(X\\). Kelas dari \\(x\\) disebut orbitnya. Yang membentuk grup adalah transformasi; \\(X\\) tidak harus mempunyai operasi grup."
       ]
     },
     "exercises": [
@@ -1827,9 +1827,9 @@ window.GROUP_LESSONS=[
         "rubric": "Membedakan objek dan transformasi, bukan sekadar menghitung empat anggota."
       },
       {
-        "q": "Buktikan jika y berada pada orbit x, maka orbit y sama dengan orbit x.",
-        "hint": "Tulis \\(y=g\\cdot x\\), gunakan g dan inversnya.",
-        "answer": "Setiap \\(h\\cdot y=(hg)\\cdot x\\) berada pada orbit x. Sebaliknya \\(x=g^{-1}\\cdot y\\) memberi inklusi balik. Maka kedua orbit sama.",
+        "q": "Buktikan jika \\(y\\) berada pada orbit \\(x\\), maka orbit \\(y\\) sama dengan orbit \\(x\\).",
+        "hint": "Tulis \\(y=g\\cdot x\\), gunakan \\(g\\) dan inversnya.",
+        "answer": "Setiap \\(h\\cdot y=(hg)\\cdot x\\) berada pada orbit \\(x\\). Sebaliknya \\(x=g^{-1}\\cdot y\\) memberi inklusi balik. Maka kedua orbit sama.",
         "rubric": "Menunjukkan kedua inklusi."
       },
       {
@@ -1930,7 +1930,7 @@ window.GROUP_LESSONS=[
         "title": "Menolak isomorfisme dengan informasi yang tepat",
         "steps": [
           "Bandingkan grup aditif \\(\\mathbb Z_8\\) dan \\(\\mathbb Z_4\\times\\mathbb Z_2\\), keduanya berorde 8. Kesamaan ukuran saja belum menentukan isomorfisme.",
-          "\\(\\mathbb Z_{8}\\) mempunyai elemen [1] berorde 8. Pada grup hasil kali, empat kali setiap pasangan adalah identitas karena komponen pertama modulo 4 dan kedua modulo 2.",
+          "\\(\\mathbb Z_{8}\\) mempunyai elemen \\([1]\\) berorde 8. Pada grup hasil kali, empat kali setiap pasangan adalah identitas karena komponen pertama modulo 4 dan kedua modulo 2.",
           "Jadi tidak ada elemen berorde 8 pada grup hasil kali. Isomorfisme mempertahankan orde elemen, sehingga kedua grup tidak isomorfik. Tidak perlu mencoba semua bijeksi satu per satu."
         ]
       }
@@ -1938,9 +1938,9 @@ window.GROUP_LESSONS=[
     "proof": {
       "title": "Bukti terpandu: membaca serat homomorfisme sebagai koset",
       "steps": [
-        "Misalkan \\(\\varphi:G\\to H\\) homomorfisme dan \\(K=\\ker\\varphi\\). Untuk g tertentu, serat di \\(\\varphi(g)\\) ialah himpunan semua x dengan \\(\\varphi(x)=\\varphi(g)\\).",
+        "Misalkan \\(\\varphi:G\\to H\\) homomorfisme dan \\(K=\\ker\\varphi\\). Untuk \\(g\\) tertentu, serat di \\(\\varphi(g)\\) ialah himpunan semua \\(x\\) dengan \\(\\varphi(x)=\\varphi(g)\\).",
         "Jika \\(\\varphi(x)=\\varphi(g)\\), maka \\(\\varphi(g^{-1}x)=e_H\\), sehingga \\(g^{-1}x\\in K\\). Jadi \\(x\\in gK\\).",
-        "Sebaliknya jika \\(x=gk\\) untuk k dalam K, maka \\(\\varphi(x)=\\varphi(g)\\varphi(k)=\\varphi(g)\\). Jadi serat itu tepat gK.",
+        "Sebaliknya jika \\(x=gk\\) untuk \\(k\\) dalam \\(K\\), maka \\(\\varphi(x)=\\varphi(g)\\varphi(k)=\\varphi(g)\\). Jadi serat itu tepat \\(gK\\).",
         "Untuk grup hingga, setiap serat tak kosong mempunyai ukuran \\(|K|\\). Nilai-nilai berbeda dalam citra memberikan serat-serat terpisah yang mempartisi domain. Maka \\(|G|=|K|\\,|\\operatorname{Im}\\varphi|\\).",
         "Persamaan ukuran ini sesuai dengan Teorema Isomorfisme Pertama, tetapi kesamaan ukuran saja bukan bukti adanya isomorfisme; peta terinduksi dan operasinya tetap harus diperiksa."
       ]
@@ -1948,12 +1948,12 @@ window.GROUP_LESSONS=[
     "exercises": [
       {
         "q": "Untuk \\([x]_{15}\\mapsto[2x]_{10}\\), tentukan keterdefinisian, kernel, citra, dan ukuran kuosien kernel.",
-        "hint": "Periksa 10 membagi 30, lalu selesaikan 2x=0 modulo 10.",
+        "hint": "Periksa 10 membagi 30, lalu selesaikan \\(2x=0\\) modulo 10.",
         "answer": "Aturan sah dan homomorfisme. Kernel \\(\\{[0],[5],[10]\\}\\), citra lima kelas genap di \\(\\mathbb Z_{10}\\), ukuran kuosien 5. Peta tidak injektif dan tidak surjektif ke \\(\\mathbb Z_{10}\\).",
         "rubric": "Jangan menyebut kernel sebelum memastikan aturan sah."
       },
       {
-        "q": "G berorde 21 dan a elemen bukan identitas. Daftarkan orde a yang mungkin menurut Lagrange.",
+        "q": "\\(G\\) berorde 21 dan \\(a\\) elemen bukan identitas. Daftarkan orde \\(a\\) yang mungkin menurut Lagrange.",
         "hint": "Gunakan pembagi positif 21 dan singkirkan orde 1.",
         "answer": "Calonnya 3,7,21. Daftar ini tidak menjamin semua calon ada dalam setiap grup berorde 21.",
         "rubric": "Membedakan kemungkinan dan keberadaan."
@@ -1967,7 +1967,7 @@ window.GROUP_LESSONS=[
       {
         "q": "Apakah kernel trivial dan ukuran domain sama dengan kodomain menjamin isomorfisme? Nyatakan asumsi yang diperlukan.",
         "hint": "Bedakan himpunan hingga dari tak hingga.",
-        "answer": "Untuk homomorfisme antara dua grup hingga berorde sama, ya: kernel trivial memberi injektif, lalu kesamaan ukuran hingga memberi surjektif. Untuk grup tak hingga tidak cukup: \\(n\\mapsto2n\\) dari Z ke Z mempunyai kernel trivial tetapi tidak surjektif.",
+        "answer": "Untuk homomorfisme antara dua grup hingga berorde sama, ya: kernel trivial memberi injektif, lalu kesamaan ukuran hingga memberi surjektif. Untuk grup tak hingga tidak cukup: \\(n\\mapsto2n\\) dari \\(\\mathbb Z\\) ke \\(\\mathbb Z\\) mempunyai kernel trivial tetapi tidak surjektif.",
         "rubric": "Menyebut homomorfisme dan hipotesis hingga."
       },
       {
@@ -1996,7 +1996,7 @@ window.GROUP_LESSONS=[
     ],
     "assessment": {
       "q": "Untuk \\([x]_{21}\\mapsto[2x]_7\\), susun rantai: aturan sah → kernel → normalitas → kuosien → isomorfisme.",
-      "answer": "7 membagi 42, jadi aturan sah dan aditif. Kernel {[0],[7],[14]}, citra seluruh \\(\\mathbb Z_{7}\\). Kernel normal, kuosien mempunyai 7 elemen, dan x+K↦\\([2x]_{7}\\) memberi isomorfisme ke \\(\\mathbb Z_{7}\\). Peta awal surjektif tetapi tidak injektif.",
+      "answer": "7 membagi 42, jadi aturan sah dan aditif. Kernel \\(\\{[0],[7],[14]\\}\\), citra seluruh \\(\\mathbb Z_{7}\\). Kernel normal, kuosien mempunyai 7 elemen, dan \\(x+K\\mapsto [2x]_{7}\\) memberi isomorfisme ke \\(\\mathbb Z_{7}\\). Peta awal surjektif tetapi tidak injektif.",
       "rubric": [
         "Setiap panah mempunyai alasan.",
         "Jangan menyamakan peta awal dengan peta terinduksi."
