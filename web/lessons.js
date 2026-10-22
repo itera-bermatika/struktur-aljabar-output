@@ -37,18 +37,18 @@ window.GROUP_LESSONS=[
     "lab": "operation",
     "prompt": "Prediksi apa yang berubah ketika penjumlahan modulo 6 diganti menjadi perkalian modulo 6. Identitas tetap ada, tetapi apakah setiap elemen dapat dibalik?",
     "quiz": {
-      "q": "Lima contoh memenuhi suatu klaim universal. Apa yang dapat disimpulkan?",
+      "q": "Lima kasus memenuhi suatu klaim universal, tetapi masih ada kasus dalam domain yang belum diperiksa dan belum ada argumen umum. Apa yang dapat disimpulkan dari pemeriksaan itu saja?",
       "choices": [
         "Klaim itu pasti terbukti",
         "Dugaan mendapat dukungan, tetapi belum terbukti",
         "Klaim itu pasti salah"
       ],
       "answer": 1,
-      "why": "Pemeriksaan sebagian kasus tidak mencakup seluruh objek yang dimaksud. Bukti harus menjangkau semua kasus dalam hipotesis.",
+      "why": "Pemeriksaan ini belum mencakup seluruh domain dan belum disertai argumen umum. Pemeriksaan lengkap seluruh kasus pada domain hingga dapat menjadi bukti.",
       "feedback": [
-        "Contoh yang lolos belum mencakup semua kasus; perlu alasan umum.",
-        "Pemeriksaan sebagian kasus tidak mencakup seluruh objek yang dimaksud. Bukti harus menjangkau semua kasus dalam hipotesis.",
-        "Lolosnya lima contoh tidak menyatakan klaim salah; data itu hanya mendukung dugaan."
+        "Belum: masih ada kasus yang belum diperiksa dan belum ada argumen yang menjangkaunya.",
+        "Pemeriksaan ini belum mencakup seluruh domain dan belum disertai argumen umum. Pemeriksaan lengkap seluruh kasus pada domain hingga dapat menjadi bukti.",
+        "Lolosnya lima kasus tidak membuktikan klaim salah; pemeriksaan itu mendukung dugaan tetapi belum membuktikannya."
       ]
     },
     "prerequisites": [
@@ -462,7 +462,7 @@ window.GROUP_LESSONS=[
       ],
       [
         "Subgrup yang dibangkitkan",
-        "Subgrup \\(\\langle a\\rangle\\) memuat semua pangkat bulat \\(a\\), atau semua kelipatan bulat \\(a\\) dalam notasi aditif. Di \\(\\mathbb{Z}_{n}\\), daftar kelipatan \\(a\\) modulo \\(n\\) akhirnya kembali ke \\(0\\). Bukan hanya kelipatan pertama yang perlu diperhatikan."
+        "Subgrup yang dibangkitkan oleh \\(a\\) terdiri tepat atas semua pangkat bulatnya: \\(\\langle a\\rangle=\\{a^k:k\\in\\mathbb Z\\}\\). Di sini \\(a^0=e\\), dan untuk \\(k\\) positif, \\(a^{-k}=(a^{-1})^k\\). Dalam notasi aditif, \\(\\langle a\\rangle=\\{ka:k\\in\\mathbb Z\\}\\). Himpunan ini subgrup: memuat identitas, dan \\(a^i(a^j)^{-1}=a^{i-j}\\) tetap di dalamnya. Ini subgrup terkecil yang memuat \\(a\\), sebab setiap subgrup yang memuat \\(a\\) harus memuat semua pangkat bulatnya. Di \\(\\mathbb Z_n\\), daftar kelipatan \\(a\\) modulo \\(n\\) akhirnya kembali ke \\(0\\)."
       ]
     ],
     "example": "Dalam \\(\\mathbb{Z}_{12}, \\langle 4\\rangle  = \\{0,4,8\\}\\). Penjumlahan dan invers tetap berada di dalamnya. Himpunan \\(\\{0,4\\}\\) bukan subgrup karena \\(4 + 4 = 8\\) tidak termasuk.",
@@ -470,18 +470,18 @@ window.GROUP_LESSONS=[
     "lab": "coset",
     "prompt": "Kasus baru: di grup aditif \\(\\mathbb Z_{15}\\), prediksi anggota subgrup yang dibangkitkan \\([6]\\). Tuliskan jejak kelipatan hingga kembali ke nol sebelum membuka laboratorium.",
     "quiz": {
-      "q": "Untuk \\(H \\subseteq  G\\), kriteria \\(ab^{-1} \\in  H\\) cukup jika…",
+      "q": "Misalkan \\(G\\) grup dan \\(H\\subseteq G\\) memenuhi \\(ab^{-1}\\in H\\) untuk semua \\(a,b\\in H\\). Asumsi tambahan paling lemah di antara pilihan berikut yang menjamin \\(H\\) subgrup adalah…",
       "choices": [
         "\\(H\\) tak kosong",
         "\\(H\\) mempunyai tepat dua anggota",
-        "\\(G\\) harus komutatif"
+        "\\(H=G\\)"
       ],
       "answer": 0,
-      "why": "Tak kosong diperlukan untuk memulai argumen dan menghasilkan identitas. Kriteria berlaku juga pada grup nonabelian.",
+      "why": "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan H tak kosong dan membatasi H lebih jauh.",
       "feedback": [
-        "Tak kosong diperlukan untuk memulai argumen dan menghasilkan identitas. Kriteria berlaku juga pada grup nonabelian.",
-        "Banyak anggota dua bukan syarat kriteria satu langkah.",
-        "Kriteria subgrup juga berlaku pada grup nonabelian."
+        "Ketak-kosongan sudah cukup untuk memulai bukti kriteria subgrup. Dua pilihan lain juga cukup, tetapi lebih kuat: keduanya mengakibatkan H tak kosong dan membatasi H lebih jauh.",
+        "Tepat dua anggota memang cukup karena menjamin tak kosong. Namun ini bukan asumsi paling lemah; kriteria juga berlaku untuk subgrup berukuran lain.",
+        "H=G memang cukup, tetapi lebih kuat daripada tak kosong. Kriteria juga berlaku untuk subgrup sejati."
       ]
     },
     "prerequisites": [
@@ -1287,7 +1287,7 @@ window.GROUP_LESSONS=[
       ],
       [
         "Aturan di grup siklik",
-        "Aturan \\(\\varphi ([x]_{m}) = [kx]_{n}\\) sah tepat ketika \\(n\\) membagi \\(km\\). Sebab \\([m]_{m} = [0]_{m}\\) harus mempunyai citra yang sama. Jika syarat ini terpenuhi, pelestarian penjumlahan mengikuti distribusi \\(k(x + y) = kx + ky\\)."
+        "Ambil bilangan bulat positif \\(m,n\\) dan bilangan bulat \\(k\\). Aturan \\(\\varphi([x]_m)=[kx]_n\\) sah tepat ketika \\(n\\mid km\\). Arah perlu: \\([m]_m=[0]_m\\) harus mempunyai citra sama, sehingga \\([km]_n=[0]_n\\). Arah cukup: jika \\(n\\mid km\\) dan \\([x]_m=[y]_m\\), ada \\(t\\in\\mathbb Z\\) dengan \\(x-y=mt\\). Maka \\(kx-ky=kmt\\) habis dibagi \\(n\\), sehingga \\([kx]_n=[ky]_n\\). Jadi hasil tidak bergantung pada wakil. Setelah aturan sah, persamaan \\(k(x+y)=kx+ky\\) menunjukkan pelestarian penjumlahan, sehingga aturan ini homomorfisme."
       ]
     ],
     "example": "\\(\\varphi : \\mathbb{Z}_{12} \\to  \\mathbb{Z}_{6}, \\varphi ([x]) = [2x]\\), sah karena \\(6\\) membagi \\(24\\). Kernel \\(\\{0,3,6,9\\}\\); citra \\(\\{0,2,4\\}\\). Peta ini tidak injektif dan tidak surjektif ke seluruh \\(\\mathbb{Z}_{6}\\).",
@@ -1477,7 +1477,7 @@ window.GROUP_LESSONS=[
       "steps": [
         "Andaikan \\(N\\trianglelefteq G\\). Ambil \\(aN=a'N\\) dan \\(bN=b'N\\). Ada \\(n_1,n_2\\in N\\) sehingga \\(a'=an_1\\), \\(b'=bn_2\\).",
         "Maka \\(a'b'=an_1bn_2=ab(b^{-1}n_1b)n_2\\). Normalitas memberi \\(b^{-1}n_1b\\in N\\), sehingga faktor sesudah ab berada di N. Jadi \\(a'b'N=abN\\): hasil tidak bergantung pada wakil.",
-        "Sebaliknya, jika aturan \\((aN)(bN)=abN\\) tidak bergantung pada wakil, maka untuk \\(n\\in N\\), wakil e dan n dari N harus memberi \\(gN=ngN\\). Kriteria koset memberi \\(g^{-1}ng\\in N\\). Berlaku untuk semua g dan n, sehingga \\(g^{-1}Ng\\subseteq N\\); mengganti g dengan inversnya memberi kesamaan. Jadi N normal.",
+        "Sebaliknya, jika aturan \\((aN)(bN)=abN\\) tidak bergantung pada wakil, maka untuk \\(n\\in N\\), wakil e dan n dari N harus memberi \\(gN=ngN\\). Kriteria koset memberi \\(g^{-1}ng\\in N\\). Berlaku untuk semua g dan n, sehingga \\(g^{-1}Ng\\subseteq N\\); mengganti \\(g\\) dengan \\(g^{-1}\\) memberi \\(gNg^{-1}\\subseteq N\\). Konjugasi inklusi terakhir oleh \\(g^{-1}\\) memberi \\(N\\subseteq g^{-1}Ng\\). Kedua inklusi memberi \\(g^{-1}Ng=N\\). Jadi N normal.",
         "Setelah operasi sah, himpunan koset tak kosong karena memuat N. Ketertutupan: \\((aN)(bN)=abN\\in G/N\\). Asosiativitas mengikuti \\((ab)c=a(bc)\\) di G.",
         "Identitas: \\(N(aN)=(aN)N=aN\\). Invers: \\((aN)(a^{-1}N)=N=(a^{-1}N)(aN)\\). Keempat aksioma terpenuhi.",
         "Normalitas bukan syarat tambahan yang dapat diabaikan setelah menghitung ukuran. Ia memastikan bahwa aturan operasi standar pada koset benar-benar sah."
@@ -1539,7 +1539,7 @@ window.GROUP_LESSONS=[
       {
         "q": "Buktikan kernel homomorfisme selalu normal.",
         "hint": "Untuk \\(k\\in\\ker\\varphi\\), hitung \\(\\varphi(gkg^{-1})\\).",
-        "answer": "\\(\\varphi(gkg^{-1})=\\varphi(g)e_H\\varphi(g)^{-1}=e_H\\). Jadi \\(g(\\ker\\varphi)g^{-1}\\subseteq\\ker\\varphi\\); mengganti g dengan inversnya memberi inklusi sebaliknya. Kernel sudah subgrup, sehingga normal.",
+        "answer": "Tuliskan \\(K=\\ker\\varphi\\). Untuk semua \\(g\\in G\\) dan \\(k\\in K\\), \\(\\varphi(gkg^{-1})=\\varphi(g)e_H\\varphi(g)^{-1}=e_H\\). Jadi \\(gKg^{-1}\\subseteq K\\). Mengganti \\(g\\) dengan \\(g^{-1}\\) memberi \\(g^{-1}Kg\\subseteq K\\); konjugasi inklusi ini oleh \\(g\\) memberi \\(K\\subseteq gKg^{-1}\\). Maka \\(gKg^{-1}=K\\) untuk setiap \\(g\\). Kernel sudah subgrup, sehingga normal.",
         "rubric": "Sertakan alasan kesamaan, tidak berhenti pada satu inklusi."
       },
       {

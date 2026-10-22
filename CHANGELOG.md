@@ -1,5 +1,13 @@
 # Riwayat Perubahan
 
+## Web 0.7 — Koreksi matematis mikro, 23 Oktober 2026
+
+- Kuis Bab 0 membedakan pemeriksaan sebagian kasus dari pemeriksaan lengkap domain hingga.
+- Kuis Bab 3 menanyakan asumsi paling lemah; umpan balik membedakan syarat cukup dari syarat yang lebih kuat.
+- Subgrup yang dibangkitkan didefinisikan sebagai tepat semua pangkat bulat, disertai alasan subgrup terkecil.
+- Syarat peta antarkelas residu dilengkapi parameter dan bukti umum kedua arah keterdefinisian.
+- Inklusi balik pada normalitas dan normalitas kernel diperinci melalui konjugasi.
+
 ## Web 0.7 — 22 Oktober 2026
 
 - Koreksi notasi invers dan indeks di seluruh bidang teks materi aktif.
