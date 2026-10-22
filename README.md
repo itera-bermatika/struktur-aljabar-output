@@ -4,14 +4,19 @@
 
 **Draf pengembangan 0.1 — 22 Oktober 2026**
 
-Lisensi distribusi ulang belum ditetapkan. Repositori ini memuat keluaran
-publik; sumber pengembangan dikelola secara privat.
+Ketentuan penggunaan tercantum pada [LICENSE](LICENSE). Repositori ini
+memuat keluaran publik; sumber pengembangan dikelola secara privat.
 
 Bahan bacaan mandiri untuk mahasiswa S1 Matematika, dari perilaku operasi
 hingga isomorfisme. Versi ini menyatukan revisi awal Bab 0–13 dalam
 379 halaman, termasuk bagian awal buku.
 
 ## Baca buku
+
+[Buka bacaan web interaktif](https://itera-bermatika.github.io/struktur-aljabar-output/web/)
+
+Versi web menyediakan 14 bahasan ringkas, enam laboratorium, dan latihan
+dengan umpan balik. Gunakan PDF untuk uraian dan latihan lengkap.
 
 [Buka PDF lengkap](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_I_Grup.pdf)
 
