@@ -47,6 +47,7 @@
  },
  3:{
   time:35,
+  prompt:T`Pada grup aditif \(\mathbb Z_{12}\), prediksi anggota subgrup yang dibangkitkan \(4\). Setelah membuka laboratorium, ubah generator dan jelaskan kapan jejak kelipatan berulang.`,
   prerequisites:['Memahami empat aksioma grup dan invers dua sisi.','Dapat menggunakan notasi subhimpunan serta elemen sebarang.'],
   worked:[
    {title:'Subgrup aditif dengan kriteria selisih',steps:[T`Ambil \(H=3\mathbb Z\subseteq\mathbb Z\). Tidak kosong karena \(0=3\cdot0\in H\).`,T`Ambil sembarang \(a,b\in H\). Ada \(m,n\in\mathbb Z\) sehingga \(a=3m\), \(b=3n\).`,T`Maka \(a-b=3(m-n)\in H\). Kriteria selisih memberi \(H\le(\mathbb Z,+)\). Menguji hanya \(3-6\) belum cukup; bentuk \(3m-3n\) menjangkau semua pasangan.`]},
