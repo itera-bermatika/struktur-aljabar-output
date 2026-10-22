@@ -1,5 +1,13 @@
 # Riwayat Perubahan
 
+## Web 0.4 — 22 Oktober 2026
+
+- Pendalaman Bab 1–3: prasyarat, enam contoh tambahan, tiga bukti terpandu.
+- Lima belas latihan dengan petunjuk, pembahasan, dan rubrik mandiri.
+- Prediksi sebelum membuka laboratorium Bab 1–3.
+- Laboratorium pemetaan dasar untuk Bab 1, pembatasan tampilan subgrup Bab 3–4.
+- Refleksi khusus untuk setiap bab yang diperdalam.
+
 ## Web 0.3 — 22 Oktober 2026
 
 - Empat aksioma grup dinyatakan eksplisit: ketertutupan, asosiativitas, identitas, invers.
