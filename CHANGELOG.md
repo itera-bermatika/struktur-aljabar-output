@@ -1,5 +1,12 @@
 # Riwayat Perubahan
 
+## Web 0.5 — 22 Oktober 2026
+
+- Pendalaman Bab 7, 9, 10, 11: delapan contoh terurai, empat bukti terpandu, 20 latihan dengan pembahasan dan rubrik.
+- Laboratorium koset S3: perbandingan kiri/kanan, contoh normal dan tidak normal, saksi kegagalan pergantian wakil, serta tabel kuosien S3/A3.
+- Bab 9 menunda korespondensi koset kernel–citra sampai Bab 11.
+- Pemenggalan langkah bukti panjang agar tetap terbaca pada ponsel.
+
 ## Web 0.4 — 22 Oktober 2026
 
 - Pendalaman Bab 1–3: prasyarat, enam contoh tambahan, tiga bukti terpandu.
