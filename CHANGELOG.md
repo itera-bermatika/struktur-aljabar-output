@@ -1,5 +1,13 @@
 # Riwayat Perubahan
 
+## Web 0.6 — 22 Oktober 2026
+
+- Pendalaman Bab 4–6, 8, 12–13 serta pengantar Bab 0.
+- Semua 14 bahasan kini mempunyai prasyarat, dua contoh tambahan terurai, satu bukti terpandu, dan lima latihan dengan petunjuk/pembahasan/rubrik.
+- Prediksi sebelum laboratorium dan refleksi khusus seluruh bab.
+- Tautan PDF per bahasan menuju halaman awal bab, dicocokkan dengan bookmark PDF publik.
+- Pengujian seluruh bab desktop dan ponsel dengan bukti serta pembahasan terbuka.
+
 ## Web 0.5 — 22 Oktober 2026
 
 - Pendalaman Bab 7, 9, 10, 11: delapan contoh terurai, empat bukti terpandu, 20 latihan dengan pembahasan dan rubrik.

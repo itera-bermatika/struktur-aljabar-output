@@ -15,8 +15,12 @@ hingga isomorfisme. Versi ini menyatukan revisi awal Bab 0–13 dalam
 
 [Buka bacaan web interaktif](https://itera-bermatika.github.io/struktur-aljabar-output/web/)
 
-Versi web menyediakan 14 bahasan ringkas, enam laboratorium, dan latihan
-dengan umpan balik. Gunakan PDF untuk uraian dan latihan lengkap.
+Versi web 0.6 menyediakan 14 bahasan dengan prasyarat, 28 contoh tambahan
+yang diuraikan, 14 bukti terpandu, serta 70 latihan dengan petunjuk,
+pembahasan, dan rubrik mandiri. Laboratorium dapat dibuka setelah membuat
+prediksi. Tautan pada tiap bahasan menuju bab PDF yang sesuai.
+Gunakan PDF untuk cakupan dan latihan yang lebih lengkap.
+Efektivitas pembelajaran versi ini belum diuji bersama mahasiswa.
 
 [Buka PDF lengkap](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_I_Grup.pdf)
 
