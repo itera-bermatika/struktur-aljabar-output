@@ -1,17 +1,34 @@
-# Bacaan Struktur Aljabar I: Grup
+# Bacaan Struktur Aljabar — Grup, Gelanggang, dan Lapangan
 
 **Tri Utomo · Program Studi Matematika, Institut Teknologi Sumatera**
 
-**Draf pengembangan 0.1 — 22 Oktober 2026**
+**Seri draf pengembangan · Pembaruan jilid II: 23 Oktober 2026**
 
 Ketentuan penggunaan tercantum pada [LICENSE](LICENSE). Repositori ini
 memuat keluaran publik; sumber pengembangan dikelola secara privat.
 
-Bahan bacaan mandiri untuk mahasiswa S1 Matematika, dari perilaku operasi
-hingga isomorfisme. Versi ini menyatukan revisi awal Bab 0–13 dalam
-379 halaman, termasuk bagian awal buku.
+Bahan bacaan mandiri untuk mahasiswa S1 Matematika. Jilid I membahas
+Grup (379 halaman); Jilid II membahas Gelanggang dan Lapangan (467 halaman).
+Keduanya masih draf pengembangan.
 
-## Baca buku
+## Jilid II: Gelanggang dan Lapangan
+
+**Draf pengembangan Ring 0.1 — 23 Oktober 2026 · 467 halaman**
+
+[Buka PDF Gelanggang dan Lapangan](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_II_Gelanggang_dan_Lapangan.pdf)
+
+Bab 1–13 mencakup gelanggang, subgelanggang, ideal, kuosien, homomorfisme,
+daerah integral, lapangan, Euclid/PID/UFD, polinomial, ekstensi lapangan,
+lapangan hingga, aplikasi, dan sintesis. Gelanggang umum tidak diwajibkan
+mempunyai elemen satuan; pembahasan yang memerlukan satuan menyatakannya
+secara khusus. Daerah integral dan lapangan memerlukan satuan bukan nol.
+
+Revisi konvensi, rujukan silang, sitasi, dan contoh terpilih telah diperiksa;
+penelaahan matematis independen seluruh bukti serta solusi lengkap latihan
+masih terbuka. Daftar pustaka bahan revisi tersedia.
+[Catatan draf Ring](RING.md) menjelaskan perubahan dan batas pemeriksaan.
+
+## Jilid I: Grup — Baca buku
 
 [Buka bacaan web interaktif](https://itera-bermatika.github.io/struktur-aljabar-output/web/)
 
@@ -40,10 +57,9 @@ Efektivitas pembelajaran versi ini belum diuji bersama mahasiswa.
 | 12–13 | Aplikasi dan Sintesis Teori Grup |
 
 Contoh, kotak intuisi, pertanyaan eksplorasi, latihan bertahap, dan jawaban
-terpilih mendukung pembacaan mandiri. Jilid Ring dan Lapangan sedang
-dikembangkan dan belum termasuk dalam publikasi ini.
+terpilih mendukung pembacaan mandiri.
 
-## Status naskah
+## Status naskah jilid Grup
 
 Bab 0–13 telah mendapat revisi awal. Contoh terpilih dihitung ulang;
 rujukan silang, hasil kompilasi, dan tampilan halaman telah diperiksa.

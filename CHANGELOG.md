@@ -1,5 +1,14 @@
 # Riwayat Perubahan
 
+## Ring 0.1 — 23 Oktober 2026
+
+- Publikasi awal PDF Gelanggang dan Lapangan: 467 halaman, Bab 1–13.
+- Konvensi gelanggang tanpa kewajiban satuan, subgelanggang dan homomorfisme umum diselaraskan dengan jilid Grup serta bahan perkuliahan.
+- Pelengkapan klasifikasi, unit, ideal satu sisi/utama, karakteristik umum, hipotesis kuosien, serta lapangan hasil bagi.
+- Koreksi audit matematis terpilih, label ganda, navigasi PDF, dan daftar pustaka.
+- Status draf pengembangan; audit mikro seluruh bukti/latihan belum selesai.
+
+
 ## Web 0.7 — Cakupan MathJax, 23 Oktober 2026
 
 - Penandaan matematika inline dilengkapi pada semua 14 bab, termasuk bukti, petunjuk, pembahasan, rubrik, refleksi, evaluasi, dan umpan balik kuis.
