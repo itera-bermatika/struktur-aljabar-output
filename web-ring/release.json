@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "release": "ring-0.1-4dc987250355",
+  "release": "ring-0.1-3d4e3e5adfbd",
   "chapters": 13,
   "exercises": 65,
   "workedExamples": 26,
@@ -9,7 +9,7 @@
   "files": [
     {
       "file": "style.css",
-      "sha256": "05c362e2227fb711579a3f1e1ae5ac994a96f6eece896f44b39231d10212e652"
+      "sha256": "227733192fd999c79b2f656ed5d9012374005a13b3d191added87b04a9e23024"
     },
     {
       "file": "mathjax-config.js",
@@ -17,11 +17,11 @@
     },
     {
       "file": "notation.js",
-      "sha256": "3648cf7d16577edefd659f3f5ca7d93fa3fa30614ee619323231a06d99787d67"
+      "sha256": "18ecc6b8cbcc25c7a13ff6dea75e2eca6ab65ef922be5c13ea12db1702b92469"
     },
     {
       "file": "lessons.js",
-      "sha256": "d5e3fc4660141b818bfb3e07cf2285b743662c94083d6fb6eb5bc629e16773d1"
+      "sha256": "4bfdbd1318d487d2d0c4c561972e6bcb42f676cd33764a287d0dc70b9582347c"
     },
     {
       "file": "core.js",
