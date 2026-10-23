@@ -4,6 +4,11 @@ Tri Utomo · Institut Teknologi Sumatera · 23 Oktober 2026
 
 [Baca PDF 467 halaman](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_II_Gelanggang_dan_Lapangan.pdf)
 
+[Baca versi web interaktif](https://itera-bermatika.github.io/struktur-aljabar-output/web-ring/)
+
+Versi web pendamping memuat 13 bab dan eksplorasi. Efektivitas pembelajaran
+belum diuji bersama mahasiswa.
+
 ## Konvensi
 
 Gelanggang umum tidak wajib mempunyai satuan perkalian. Homomorfisme umum

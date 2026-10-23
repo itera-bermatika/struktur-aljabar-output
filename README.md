@@ -13,6 +13,12 @@ Keduanya masih draf pengembangan.
 
 ## Jilid II: Gelanggang dan Lapangan
 
+[Buka bacaan interaktif Gelanggang dan Lapangan](https://itera-bermatika.github.io/struktur-aljabar-output/web-ring/)
+
+Versi web Ring 0.1 menyediakan 13 bab, 26 contoh terurai, 13 bukti
+terpandu, 65 latihan berpetunjuk dan berpembahasan, 13 evaluasi mandiri,
+serta laboratorium gelanggang. Kemajuan dan jawaban tersimpan di browser.
+
 **Draf pengembangan Ring 0.1 — 23 Oktober 2026 · 467 halaman**
 
 [Buka PDF Gelanggang dan Lapangan](https://itera-bermatika.github.io/struktur-aljabar-output/Bacaan_Struktur_Aljabar_II_Gelanggang_dan_Lapangan.pdf)

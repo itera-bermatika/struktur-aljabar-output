@@ -1,5 +1,14 @@
 # Riwayat Perubahan
 
+## Web Ring 0.1 — 23 Oktober 2026
+
+- Bacaan interaktif Gelanggang dan Lapangan, Bab 1–13, mengikuti PDF Ring 0.1.
+- 26 contoh terurai, 13 bukti terpandu, 65 latihan, 13 kuis dan evaluasi mandiri.
+- Eksplorasi ring modulo, subgelanggang/ideal, kuosien, homomorfisme, pecahan, Euclid, polinomial, ekstensi, lapangan hingga, dan paritas.
+- MathJax lokal dengan font dan baseline yang sama dengan jilid Grup.
+- Pengujian matematika serta seluruh bab desktop/ponsel; penyimpanan browser terpisah dari jilid Grup.
+
+
 ## Ring 0.1 — 23 Oktober 2026
 
 - Publikasi awal PDF Gelanggang dan Lapangan: 467 halaman, Bab 1–13.
